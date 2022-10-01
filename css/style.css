@@ -59,7 +59,7 @@ header {
     font-family: 'Bowlby One';
     font-weight: 700;
     color: white;
-    font-size: 200px;
+    font-size: 150px;
     margin-top: -40px;
     margin-left: 18px;
     margin-bottom: 0px;
@@ -70,7 +70,7 @@ header {
     font-family: 'Bowlby One';
     font-weight: 400;
     color: white;
-    font-size: 55px;
+    font-size: 45px;
     margin-left: 20px;
     margin-top: -70px;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
@@ -163,7 +163,8 @@ header {
     color: white;
     background-color: black;
     height: auto;
-    padding: 30px;
+    padding: 50px;
+    
 }
 
 .project-box {
@@ -173,15 +174,18 @@ header {
     height: auto;
     flex-direction: row;
     margin-top: 20px;
+    justify-content: space-around;
  
+}
+
+.project-img {
+    width: auto;
+    max-height: 200px;
 }
 
 .project-table {
     text-align: center;
-}
-.project-img {
-    width: auto;
-    height: 200px;
+    max-width: 300px;
 }
 
 
