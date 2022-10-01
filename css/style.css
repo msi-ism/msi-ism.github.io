@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -7,44 +10,68 @@
 }
 
 
-h1, h3  {
-    font-family: Helvetica, sans-serif;
-}
 h2 {
-    font-family: Helvetica, sans-serif;
+    font-family: 'DM Sans', sans-serif;
     text-decoration: underline;
 }
 a {
-    font-family: Helvetica, sans-serif;
-    color: white;
+    font-family: 'DM Sans', sans-serif;
+    
 }
 p {
     font-size: 1em;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 li {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'DM Sans', sans-serif;
     list-style: none;
+    
 }
 
 ul {
-    font-family: Arial;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
 }
 body {
     position: relative;
     background: rgb(46,26,71);
 }
 header {
-    background: blueviolet;
+    background: rgb(46,26,71);
     min-height: 50px;
     width: 100%;
 }
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.title  {
+    font-family: 'Bowlby One';
+    font-weight: 700;
+    color: white;
+    font-size: 200px;
+    margin-top: -40px;
+    margin-left: 18px;
+    margin-bottom: 0px;
+    padding: 0px;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
+}
+.title-sub  {
+    font-family: 'Bowlby One';
+    font-weight: 400;
+    color: white;
+    font-size: 55px;
+    margin-left: 20px;
+    margin-top: -70px;
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
+}
+
 
 .navbar {
     display: flex;
     min-height: 70px;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
     padding: 0 24px;
 }
@@ -54,6 +81,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    
 }
 
 .nav-branding {
@@ -62,6 +90,7 @@ header {
 
 .nav-link {
     transition: 0.7s ease;
+    color: white;
 }
 
 .nav-link:hover{
@@ -117,6 +146,17 @@ header {
     }
 
 }
+
+.project-box {
+    border: 5px solid black;
+    width: 100%;
+    height: auto;
+}
+.project-img {
+    width: auto;
+    height: 200px;
+}
+
 
 .main-content {
     margin-left: 15%;
