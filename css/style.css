@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Lexend+Deca&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Manrope:wght@300;500;700&display=swap');
 
 *{
     padding: 0;
@@ -14,13 +14,6 @@ h2 {
     text-decoration: underline;
 }
 
-h3 {
-    font-family: 'DM Sans', sans-serif;
-    text-decoration: underline;
-    text-align: center;
-    font-size: 30px;
-    padding: 10px;
-}
 
 
 a {
@@ -55,26 +48,102 @@ header {
     display: flex;
     flex-direction: column;
 }
-.title  {
-    font-family: 'Bowlby One';
+
+.container >  .title-div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    height: auto;
+    width: auto;
+}
+
+.title-div > .welcome-text {
+    font-family: 'Manrope';
     font-weight: 700;
     color: white;
-    font-size: 150px;
-    margin-top: -40px;
+    font-size: 70px;
     margin-left: 18px;
     margin-bottom: 0px;
     padding: 0px;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
 }
-.title-sub  {
-    font-family: 'Bowlby One';
+
+.title-div > .title-sub {
     font-weight: 400;
     color: white;
-    font-size: 45px;
-    margin-left: 20px;
-    margin-top: -70px;
-    text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
-    text-align: left;
+    margin-left: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    margin-top: 20px10px;
+    width: auto;
+}
+
+
+.guest-input > .guest-text {
+    font: 20px normal;
+    border: none;
+    resize: none;
+    margin-left: 18px;
+    display: inline-block;
+    background-color: rgb(108, 122, 137, 0.25);
+    height: auto;
+    width: auto;
+    padding: 3px;
+
+}
+
+span {
+    opacity: 0;
+    transition: all 0.7s step-end;
+}
+  
+span.fade {
+    opacity: 1;
+}
+
+.container > .project-div {
+    display: none;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    height: auto;
+    padding: 50px;
+    margin-top: 20px;
+
+    
+}
+
+.project-div > .project-box {
+    display: flex;
+    /* border: 3px solid black; */
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-around;
+ 
+}
+
+.project-img {
+    width: auto;
+    max-height: 200px;
+}
+
+.project-table {
+    text-align: center;
+    max-width: 300px;
+}
+
+
+.img-container {
+    grid-column-start: 2;
+    margin-left: 13%;
+}
+
+.title-img {
+    width: 500px;
+    height: auto;
+    border-radius: 69%;
 }
 
 
@@ -155,37 +224,6 @@ header {
         right: 0;
     }
 
-}
-.project-div {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    color: white;
-    background-color: black;
-    height: auto;
-    padding: 50px;
-    
-}
-
-.project-box {
-    display: flex;
-    /* border: 3px solid black; */
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    margin-top: 20px;
-    justify-content: space-around;
- 
-}
-
-.project-img {
-    width: auto;
-    max-height: 200px;
-}
-
-.project-table {
-    text-align: center;
-    max-width: 300px;
 }
 
 

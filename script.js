@@ -61,3 +61,39 @@ projectBox.appendChild(passDOM)
 
 console.log()
 console.log(simonApp)
+
+// & Screen Text Animation Function
+
+// ^ Setting up variables needed
+let welcomeText = document.querySelector('.welcome-text')
+let displayText = welcomeText.textContent
+let splitText = Array.from(displayText)
+welcomeText.textContent = ''
+console.log(splitText)
+
+
+// ^ Function that animates screen by splitting, looping, print within span and styling that span
+const printWelcome = () => {
+    for (let i = 0; i < splitText.length; i++) {
+        welcomeText.innerHTML += `<span>${splitText[i]}</span>`
+    }
+
+    const onTick = () => {
+        const span = welcomeText.querySelectorAll("span")[char]
+        span.classList.add('fade')
+        char++
+        if (char === splitText.length) {
+            complete()
+            return
+        }
+    }
+    let char = 0
+    let timer = setInterval(onTick, 50)
+
+    const complete = () => {
+        clearInterval(timer)
+        timer = null;
+    }
+}
+
+printWelcome()
