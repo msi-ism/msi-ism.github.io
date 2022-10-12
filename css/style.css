@@ -44,6 +44,9 @@ header {
     min-height: 50px;
     width: 100%;
 }
+button {
+    font-family: 'DM-Sans', sans-serif !important;
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -80,6 +83,7 @@ header {
 
 
 .guest-input > .guest-text {
+    color: white;
     font: 20px normal;
     border: none;
     resize: none;
@@ -89,7 +93,19 @@ header {
     height: auto;
     width: auto;
     padding: 3px;
+}
 
+.enter-btn {
+    color: white;
+    font-family: 'Manrope';
+    font: 20px normal;
+    border: none;
+    resize: none;
+    display: inline-block;
+    background-color: rgb(108, 122, 137, 0.25);
+    height: auto;
+    width: auto;
+    padding: 3px;
 }
 
 span {

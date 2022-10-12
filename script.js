@@ -72,6 +72,7 @@ welcomeText.textContent = ''
 console.log(splitText)
 
 
+
 // ^ Function that animates screen by splitting, looping, print within span and styling that span
 const printWelcome = () => {
     for (let i = 0; i < splitText.length; i++) {
@@ -97,3 +98,36 @@ const printWelcome = () => {
 }
 
 printWelcome()
+
+
+// ^ Creating function to capture and store guest input
+let guestBox = document.querySelector('.guest-text')
+
+const getGuest = () => {
+
+    let guestInput = guestBox.value
+    console.log(guestInput)
+    return guestInput
+}
+
+
+
+
+const enterBtn = document.querySelector('.enter-btn')
+enterBtn.addEventListener('click', getGuest)
+
+
+const welcomeGuest = () => {
+    let guestName = getGuest()
+    if (guestName.length > 0) {
+        welcomeText.textContent = `Hi, ${guestName}!`
+    
+        guestBox.value = ''
+    } else {
+        console.log('Not long enough')
+    }
+
+}
+
+
+enterBtn.addEventListener('click', welcomeGuest)
