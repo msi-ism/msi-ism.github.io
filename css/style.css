@@ -71,7 +71,7 @@ button {
     text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
 }
 
-.title-div > .title-sub {
+.title-div > .guest-question {
     font-weight: 400;
     color: white;
     margin-left: 18px;
@@ -79,6 +79,11 @@ button {
     font-size: 32px;
     margin-top: 20px10px;
     width: auto;
+    display: none;
+}
+
+.guest-input {
+    display:none;
 }
 
 

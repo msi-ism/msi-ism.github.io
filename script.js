@@ -10,7 +10,7 @@ hamburger.addEventListener('click', () => {
 
 
 // & This removes the class list of 'active' from hamburger menu on link click making the menu collapse
-document.querySelectorAll(".nav-link").forEach(n => n,addEventListener('click', () => {
+document.querySelectorAll(".nav-link").forEach(n => n, addEventListener('click', () => {
     hamburger.classList.remove('active')
 }))
 
@@ -65,16 +65,30 @@ console.log(simonApp)
 // & Screen Text Animation Function
 
 // ^ Setting up variables needed
+let introText = 'Hi, my name is Michael'
 let welcomeText = document.querySelector('.welcome-text')
-let displayText = welcomeText.textContent
-let splitText = Array.from(displayText)
-welcomeText.textContent = ''
-console.log(splitText)
+
+let nextMessage = 'This is the next message'
+// welcomeText.textContent = ''
+
+
+let guestWelcomed = false
+let tickComplete = false
+
+const checkComplete = () => {
+    tickComplete = true
+}
 
 
 
+
+// TODO Change this to "animateScreen" so that it is re-usable for other messages
 // ^ Function that animates screen by splitting, looping, print within span and styling that span
-const printWelcome = () => {
+const animateText = (str) => {
+    welcomeText.textContent = ''
+    displayText = str
+    let splitText = Array.from(displayText)
+    console.log(splitText)
     for (let i = 0; i < splitText.length; i++) {
         welcomeText.innerHTML += `<span>${splitText[i]}</span>`
     }
@@ -85,7 +99,7 @@ const printWelcome = () => {
         char++
         if (char === splitText.length) {
             complete()
-            return
+            return 
         }
     }
     let char = 0
@@ -94,22 +108,44 @@ const printWelcome = () => {
     const complete = () => {
         clearInterval(timer)
         timer = null;
+        setTimeout(checkComplete, 1100)
     }
+
 }
 
-printWelcome()
+animateText(introText)
+setTimeout(function () {animateText(nextMessage); }, 5000)
+
+
+
+let guestQuestion = document.querySelector('.guest-question')
+let guestInput = document.querySelector('.guest-input')
+
+const guestPrompt = () => {
+    if (tickComplete) {
+        guestQuestion.style.display = 'block',
+        guestInput.style.display = ''
+    } else {
+        setTimeout(guestPrompt, 30)
+    }
+
+}
+
+guestPrompt()
+
+// const loadGuest = async () => {
+//     const loaded = await
+// }
 
 
 // ^ Creating function to capture and store guest input
 let guestBox = document.querySelector('.guest-text')
 
 const getGuest = () => {
-
     let guestInput = guestBox.value
     console.log(guestInput)
     return guestInput
 }
-
 
 
 
@@ -120,8 +156,8 @@ enterBtn.addEventListener('click', getGuest)
 const welcomeGuest = () => {
     let guestName = getGuest()
     if (guestName.length > 0) {
-        welcomeText.textContent = `Hi, ${guestName}!`
-    
+        welcomeText.textContent = `Nice to meet you, ${guestName}!`
+
         guestBox.value = ''
     } else {
         console.log('Not long enough')
@@ -131,3 +167,5 @@ const welcomeGuest = () => {
 
 
 enterBtn.addEventListener('click', welcomeGuest)
+
+
