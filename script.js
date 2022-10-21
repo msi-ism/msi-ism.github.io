@@ -65,7 +65,7 @@ console.log(simonApp)
 // & Screen Text Animation Function
 
 // ^ Setting up variables needed
-let introText = 'Hi, my name is Michael'
+let introText = 'Hi, my name is Michael! 👋🏾'
 let welcomeText = document.querySelector('.welcome-text')
 
 let nextMessage = 'This is the next message'
@@ -114,7 +114,7 @@ const animateText = (str) => {
 }
 
 animateText(introText)
-setTimeout(function () {animateText(nextMessage); }, 5000)
+// setTimeout(function () {animateText(nextMessage); }, 5000)
 
 
 
@@ -124,7 +124,7 @@ let guestInput = document.querySelector('.guest-input')
 const guestPrompt = () => {
     if (tickComplete) {
         guestQuestion.style.display = 'block',
-        guestInput.style.display = ''
+        guestInput.style.display = 'block'
     } else {
         setTimeout(guestPrompt, 30)
     }
@@ -156,9 +156,11 @@ enterBtn.addEventListener('click', getGuest)
 const welcomeGuest = () => {
     let guestName = getGuest()
     if (guestName.length > 0) {
-        welcomeText.textContent = `Nice to meet you, ${guestName}!`
-
+        greetingText = `Nice to meet you, ${guestName}!`
         guestBox.value = ''
+        guestQuestion.style.display = '',
+        guestInput.style.display = ''
+        animateText(greetingText)
     } else {
         console.log('Not long enough')
     }
