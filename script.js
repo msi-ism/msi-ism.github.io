@@ -14,7 +14,7 @@ document.querySelectorAll(".nav-link").forEach(n => n, addEventListener('click',
     hamburger.classList.remove('active')
 }))
 
-
+// ** Projects
 
 //  ^ Creating class constructor for projects
 
@@ -59,47 +59,77 @@ const passDOM = createProject(passwordApp)
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(passDOM)
 
-console.log()
-console.log(simonApp)
 
-// & Screen Text Animation Function
+// * Screen Text Animation Function
 
 // ^ Setting up variables needed
 let introText = 'Hi, my name is Michael! 👋🏾'
 let welcomeText = document.querySelector('.welcome-text')
-
-let nextMessage = 'This is the next message'
-// welcomeText.textContent = ''
-
-
-let guestWelcomed = false
 let tickComplete = false
+let testString1 = 'The quick brown fox ran as quickly as he could from the rabid dog.'
+
 
 const checkComplete = () => {
     tickComplete = true
 }
 
-
-
-
-// TODO Change this to "animateScreen" so that it is re-usable for other messages
 // ^ Function that animates screen by splitting, looping, print within span and styling that span
 const animateText = (str) => {
+    // ^ 1st Wipe Content
     welcomeText.textContent = ''
+    // ^ 2nd set parameter to displayText for manipulation
+    displayText = str
+    // ^ 3rd create an array from input string 
+    let splitText = Array.from(displayText)
+    // ^ Testing
+    console.log(splitText)
+    // ^ 4th loop through split text array & add letter from splitText[i] to welcomeText inner HTML within a span tag
+    for (let i = 0; i < splitText.length; i++) {
+        welcomeText.innerHTML += `<span>${splitText[i]}</span>`
+    }
+    // ^ Creating function that adds class of fade to the spans created above
+    const onTick = () => {
+        const span = welcomeText.querySelectorAll("span")[char]
+        span.classList.add('fade')
+        // ^ Counts how many characters the span class has been added to
+        char++
+        if (char === splitText.length) {
+            // ^ if char length is equal to the length of the split text array, run complete function which stops
+            complete()
+            return
+        }
+    }
+    let char = 0
+    // ^ Setting an interval that runs onTick every .5 secs - below is where onTick is being called
+    let timer = setInterval(onTick, 50)
+    let tickLength = 750
+    const complete = () => {
+        // ^ Timeout function that runs "checkComplete" after the ticklength
+        setTimeout(checkComplete, tickLength)
+        clearInterval(timer)
+        timer = null;
+    }
+
+}
+
+
+const animateSubText = (str) => {
+    guestQuestion.style.display = 'block'
+    guestQuestion.textContent = ''
     displayText = str
     let splitText = Array.from(displayText)
     console.log(splitText)
     for (let i = 0; i < splitText.length; i++) {
-        welcomeText.innerHTML += `<span>${splitText[i]}</span>`
+        guestQuestion.innerHTML += `<span>${splitText[i]}</span>`
     }
 
     const onTick = () => {
-        const span = welcomeText.querySelectorAll("span")[char]
+        const span = guestQuestion.querySelectorAll("span")[char]
         span.classList.add('fade')
         char++
         if (char === splitText.length) {
             complete()
-            return 
+            return
         }
     }
     let char = 0
@@ -113,8 +143,7 @@ const animateText = (str) => {
 
 }
 
-animateText(introText)
-// setTimeout(function () {animateText(nextMessage); }, 5000)
+
 
 
 
@@ -124,9 +153,9 @@ let guestInput = document.querySelector('.guest-input')
 const guestPrompt = () => {
     if (tickComplete) {
         guestQuestion.style.display = 'block',
-        guestInput.style.display = 'block'
+            guestInput.style.display = 'block'
     } else {
-        setTimeout(guestPrompt, 30)
+        setTimeout(guestPrompt, 50)
     }
 
 }
@@ -138,36 +167,71 @@ guestPrompt()
 // }
 
 
+
+
+
+
+
+
+
 // ^ Creating function to capture and store guest input
 let guestBox = document.querySelector('.guest-text')
 
 const getGuest = () => {
-    let guestInput = guestBox.value
-    console.log(guestInput)
-    return guestInput
+    let guestValue = guestBox.value
+    console.log(guestValue)
+    return guestValue
 }
 
 
-
+let colorText = "What's your favorite color?"
 const enterBtn = document.querySelector('.enter-btn')
 enterBtn.addEventListener('click', getGuest)
 
+let guestWelcomed = false
+
+
+const displayElement = (ele) => {
+    ele.style.display = 'flex'
+}
 
 const welcomeGuest = () => {
-    let guestName = getGuest()
-    if (guestName.length > 0) {
-        greetingText = `Nice to meet you, ${guestName}!`
-        guestBox.value = ''
-        guestQuestion.style.display = '',
-        guestInput.style.display = ''
-        animateText(greetingText)
-    } else {
-        console.log('Not long enough')
-    }
+    let thankYouText = 'Thanks for visiting my portfolio.'
+    let colorEle = document.querySelector('.colors')
+    let guestName = getGuest() 
+    // if (guestName.length > 0) {
+    greetingText = `Nice to meet you, ${guestName}!`
+    guestBox.value = ''
+    guestQuestion.style.display = '',
+    guestInput.style.display = ''
+    guestWelcomed = true
+    animateText(greetingText)
+    setTimeout(function () { animateText(thankYouText); }, 2500)
+    setTimeout(function () { animateSubText(colorText); }, 4500)
+    setTimeout(function () { displayElement(colorEle); }, 7000)
 
 }
 
 
+// * Assigning colors to buttons
+
+const colorArr = ['rgba(204, 0, 0, .5)', 'rgba(255, 153, 51, .5)', 'rgba(255, 255, 102, .5)', 'rgba(102, 255, 102, .5)', 'rgba(102, 153, 255, .5)', 'rgba(153, 0, 204, .5)',]
+
+
+let colors = document.querySelector('.colors').children
+console.log(colors)
+Array.from(colors).forEach(color => color.style.backgroundColor = colorArr[color.id])
+
+
+
+
+// * Calling Page Scripts
+
+animateText(introText)
+
+
+
 enterBtn.addEventListener('click', welcomeGuest)
+
 
 
