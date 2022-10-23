@@ -269,6 +269,15 @@ const shadesOfViolet = new Color('violet', 'rgba(195, 112, 253, .75)', 'rgba(155
 
 
 
+const colorChoiceText = () => {
+    animateSubText("Great choice!")
+    setTimeout(function () { animateSubText("Feel free to pick another."); }, 2000)
+    setTimeout(function () { animateSubText("Whenever you're satisfied, click 'done' & I'll tell you a bit about myself."); }, 5000)
+}
+
+
+
+let clickCount = 0
 const changeTheme = (Color) => {
     let body = document.querySelector('body')
     body.style.backgroundColor = Color.bgColor
@@ -277,6 +286,10 @@ const changeTheme = (Color) => {
     navLogo.style.color = Color.accColor
     bigGuest.style.visibility = 'visible'
     bigGuest.style.backgroundImage = Color.accColor
+    clickCount++
+    if (clickCount <= 1) {
+        colorChoiceText()
+    }
 }
 
 let redBtn = document.getElementById('0')
