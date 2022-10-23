@@ -11,7 +11,6 @@
 
 h2 {
     font-family: 'DM Sans', sans-serif;
-    text-decoration: underline;
 }
 
 
@@ -37,7 +36,8 @@ ul {
 }
 body {
     position: relative;
-    background: rgba(233, 222, 111, .5);
+    /* background: rgba(233, 222, 111, .5); */
+    background: white;
 }
 header {
     background: rgb(46,26,71);
@@ -57,7 +57,7 @@ button {
     grid-template-columns: 1fr .5fr;
     grid-template-rows: 1;
     grid-gap: 2px;
-    margin-top: 50px;
+    margin-top: 35px;
     height: auto;
     width: auto;
     align-items: center;
@@ -82,7 +82,7 @@ button {
     grid-template-columns: 1fr;
     grid-template-rows: 1;
     grid-gap: 2px;
-    margin-top: 50px;
+    margin-top: 25px;
     height: auto;
     width: auto;
     align-items: center;
@@ -95,7 +95,7 @@ button {
     margin-left: 0px;
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
-    margin-top: 20px10px;
+    margin-top: 10px;
     width: auto;
     display: none;
     text-align: center;
@@ -109,10 +109,11 @@ button {
 
 
 .hand-shake {
+    visibility: hidden;
     font-size: 175px;
     padding: 20px;
     grid-column-start: 2;
-    animation: shake 2s;
+    animation: none;
     animation-iteration-count: 2;
     height: auto;
     text-align: left;
@@ -240,17 +241,25 @@ span.fade {
 
 
 .navbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     min-height: 70px;
     justify-content: right;
     align-items: center;
     padding: 0 24px;
 }
+
+
+.nav-logo {
+    font-size: 45px;
+    color: white !important;
+}
+
 .nav-menu {
     display: flex;
     min-height: 50px;
-    justify-content: space-between;
     align-items: center;
+    justify-content: right;
     gap: 40px;
     
 }
@@ -262,6 +271,7 @@ span.fade {
 .nav-link {
     transition: 0.7s ease;
     color: white;
+    text-decoration: none;
 }
 
 .nav-link:hover{

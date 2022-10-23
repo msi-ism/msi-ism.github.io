@@ -8,6 +8,22 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active')
 })
 
+// ^ Creating handshake function
+let hand = document.querySelector('.hand-shake')
+const handShakeOn = () => {
+    hand.style.visibility = 'visible'
+    hand.style.animation = 'shake 2s'
+}
+const handShakeOff = () => {
+    hand.style.animation = ''
+}
+
+const handShake = () => {
+    handShakeOn()
+    setTimeout(handShakeOff, 2000)
+}
+
+setTimeout(handShake, 2000)
 
 // & This removes the class list of 'active' from hamburger menu on link click making the menu collapse
 document.querySelectorAll(".nav-link").forEach(n => n, addEventListener('click', () => {
@@ -102,7 +118,7 @@ const animateText = (str) => {
     let char = 0
     // ^ Setting an interval that runs onTick every .5 secs - below is where onTick is being called
     let timer = setInterval(onTick, 50)
-    let tickLength = 750
+    let tickLength = 1750
     const complete = () => {
         // ^ Timeout function that runs "checkComplete" after the ticklength
         setTimeout(checkComplete, tickLength)
@@ -198,15 +214,18 @@ const displayElement = (ele) => {
 const welcomeGuest = () => {
     let thankYouText = 'Thanks for visiting my portfolio.'
     let colorEle = document.querySelector('.colors')
+    let navLogo = document.querySelector('.nav-logo')
     let guestName = getGuest() 
     // if (guestName.length > 0) {
     greetingText = `Nice to meet you, ${guestName}!`
+    navLogo.textContent = `Welcome, ${guestName}`
     guestBox.value = ''
     guestQuestion.style.display = '',
     guestInput.style.display = ''
     guestWelcomed = true
     animateText(greetingText)
     setTimeout(function () { animateText(thankYouText); }, 2500)
+    setTimeout(handShake, 2000)
     setTimeout(function () { animateSubText(colorText); }, 4500)
     setTimeout(function () { displayElement(colorEle); }, 7000)
 
@@ -221,6 +240,42 @@ const colorArr = ['rgba(204, 0, 0, .5)', 'rgba(255, 153, 51, .5)', 'rgba(255, 25
 let colors = document.querySelector('.colors').children
 Array.from(colors).forEach(color => color.style.backgroundColor = colorArr[color.id])
 
+
+
+// ^ Creating 'Color' class 
+
+class Color { 
+    constructor(name, bgColor, navColor, txtColor, accColor) {
+        this.name = name
+        this.bgColor = bgColor
+        this.navColor = navColor
+        this.txtColor = txtColor
+        this.accColor = accColor
+    }
+
+}
+
+const shadesOfRed = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
+const shadesOfOrange = new Color('red', 'rgba(240, 161, 80, .75)', 'rgba(240, 128, 32, .75)', 'white', 'rgba(240, 117, 15)')
+const shadesOfYellow = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
+const shadesOfGreen = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
+const shadesOfBlue = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
+const shadesOfViolet = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
+
+
+
+const changeTheme = (Color) => {
+    let body = document.querySelector('body')
+    body.style.backgroundColor = Color.bgColor
+    let navBar = document.querySelector('.navbar')
+    navBar.style.backgroundColor = Color.navColor
+
+}
+
+let redBtn = document.getElementById('0')
+redBtn.addEventListener('click', () => {changeTheme(shadesOfRed); })
+let orgBtn = document.getElementById('1')
+orgBtn.addEventListener('click', () => {changeTheme(shadesOfOrange); })
 
 
 
