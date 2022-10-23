@@ -159,6 +159,15 @@ button {
     cursor: pointer;
 }
 
+.big-guest {
+    visibility: hidden;
+    font-size: 200px;
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Manrope';
+}
+
+
 .guest-input > .guest-text {
     color: white;
     font: 20px normal;
@@ -273,6 +282,7 @@ span.fade {
     color: white;
     text-decoration: none;
 }
+
 
 .nav-link:hover{
     color: paleturquoise;

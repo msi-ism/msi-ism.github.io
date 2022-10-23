@@ -136,11 +136,11 @@ const animateSubText = (str) => {
     let splitText = Array.from(displayText)
     console.log(splitText)
     for (let i = 0; i < splitText.length; i++) {
-        guestQuestion.innerHTML += `<span>${splitText[i]}</span>`
+        guestQuestion.innerHTML += `<span id='split'>${splitText[i]}</span>`
     }
 
     const onTick = () => {
-        const span = guestQuestion.querySelectorAll("span")[char]
+        const span = guestQuestion.querySelectorAll("#split")[char]
         span.classList.add('fade')
         char++
         if (char === splitText.length) {
@@ -211,12 +211,17 @@ const displayElement = (ele) => {
     ele.style.display = 'flex'
 }
 
+
+let navLogo = document.querySelector('.nav-logo')
+let logoName = document.querySelector('.logo-name')
+
+let bigGuest = document.querySelector('.big-guest')
+
 const welcomeGuest = () => {
     let thankYouText = 'Thanks for visiting my portfolio.'
     let colorEle = document.querySelector('.colors')
-    let navLogo = document.querySelector('.nav-logo')
     let guestName = getGuest() 
-    // if (guestName.length > 0) {
+    bigGuest.textContent = guestName
     greetingText = `Nice to meet you, ${guestName}!`
     navLogo.textContent = `Welcome, ${guestName}`
     guestBox.value = ''
@@ -256,11 +261,11 @@ class Color {
 }
 
 const shadesOfRed = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
-const shadesOfOrange = new Color('red', 'rgba(240, 161, 80, .75)', 'rgba(240, 128, 32, .75)', 'white', 'rgba(240, 117, 15)')
-const shadesOfYellow = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
-const shadesOfGreen = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
-const shadesOfBlue = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
-const shadesOfViolet = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
+const shadesOfOrange = new Color('orange', 'rgba(240, 161, 80, .75)', 'rgba(240, 128, 32, .75)', 'white', 'rgba(240, 117, 15)')
+const shadesOfYellow = new Color('yellow', 'rgba(255, 249, 174, .75)', 'rgba(233, 215, 0, .75)', 'white', 'rgba(233, 200, 0)')
+const shadesOfGreen = new Color('green', 'rgba(164, 251, 166,.75)', 'rgba(48, 203, 0, .75)', 'white', 'rgba(0, 98, 0)')
+const shadesOfBlue = new Color('blue', 'rgba(172, 203, 255, .75)', 'rgba(120, 170, 255, .75)', 'white', 'rgba(65, 136, 255)')
+const shadesOfViolet = new Color('violet', 'rgba(195, 112, 253, .75)', 'rgba(155, 58, 215, .75)', 'white', 'rgba(124, 0, 255)')
 
 
 
@@ -269,13 +274,22 @@ const changeTheme = (Color) => {
     body.style.backgroundColor = Color.bgColor
     let navBar = document.querySelector('.navbar')
     navBar.style.backgroundColor = Color.navColor
-
+    navLogo.style.color = Color.accColor
+    bigGuest.style.visibility = 'visible'
 }
 
 let redBtn = document.getElementById('0')
 redBtn.addEventListener('click', () => {changeTheme(shadesOfRed); })
 let orgBtn = document.getElementById('1')
 orgBtn.addEventListener('click', () => {changeTheme(shadesOfOrange); })
+let yellowBtn = document.getElementById('2')
+yellowBtn.addEventListener('click', () => {changeTheme(shadesOfYellow); })
+let greenBtn = document.getElementById('3')
+greenBtn.addEventListener('click', () => {changeTheme(shadesOfGreen); })
+let blueBtn = document.getElementById('4')
+blueBtn.addEventListener('click', () => {changeTheme(shadesOfBlue); })
+let violetBtn = document.getElementById('5')
+violetBtn.addEventListener('click', () => {changeTheme(shadesOfViolet ); })
 
 
 
@@ -286,6 +300,5 @@ animateText(introText)
 
 
 enterBtn.addEventListener('click', welcomeGuest)
-
 
 
