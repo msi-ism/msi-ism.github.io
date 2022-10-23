@@ -37,7 +37,7 @@ ul {
 }
 body {
     position: relative;
-    background: rgba(255, 255, 255, .5);
+    background: rgba(233, 222, 111, .5);
 }
 header {
     background: rgb(46,26,71);
@@ -53,39 +53,84 @@ button {
 }
 
 .container >  .title-div {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr .5fr;
+    grid-template-rows: 1;
+    grid-gap: 2px;
     margin-top: 50px;
     height: auto;
     width: auto;
+    align-items: center;
 }
 
 .title-div > .welcome-text {
+    grid-column-start: 1;
     font-family: 'Manrope';
     font-weight: 700;
     color: rgba(0, 0, 0, .7);
     font-size: 70px;
-    margin-left: 18px;
+    margin-left: 0px;
     margin-bottom: 0px;
     padding: 0px;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
+    text-align: center;
+    
 }
 
-.title-div > .guest-question {
+.container > .sub-div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1;
+    grid-gap: 2px;
+    margin-top: 50px;
+    height: auto;
+    width: auto;
+    align-items: center;
+
+}
+
+.sub-div > .guest-question {
     font-weight: 400;
     color: rgba(0, 0, 0, .7);;
-    margin-left: 18px;
+    margin-left: 0px;
     font-family: 'DM Sans', sans-serif;
     font-size: 32px;
     margin-top: 20px10px;
     width: auto;
     display: none;
+    text-align: center;
 }
 
 .guest-input {
     display:none;
+    text-align: center;
+    margin-left: -18px;
 }
 
+
+.hand-shake {
+    font-size: 175px;
+    padding: 20px;
+    grid-column-start: 2;
+    animation: shake 2s;
+    animation-iteration-count: 2;
+    height: auto;
+    text-align: left;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
 
 .colors {
     display: none;

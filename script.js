@@ -63,8 +63,8 @@ projectBox.appendChild(passDOM)
 // * Screen Text Animation Function
 
 // ^ Setting up variables needed
-let introText = 'Hi, my name is Michael! 👋🏾'
 let welcomeText = document.querySelector('.welcome-text')
+let introText = welcomeText.textContent
 let tickComplete = false
 let testString1 = 'The quick brown fox ran as quickly as he could from the rabid dog.'
 
@@ -85,11 +85,11 @@ const animateText = (str) => {
     console.log(splitText)
     // ^ 4th loop through split text array & add letter from splitText[i] to welcomeText inner HTML within a span tag
     for (let i = 0; i < splitText.length; i++) {
-        welcomeText.innerHTML += `<span>${splitText[i]}</span>`
+        welcomeText.innerHTML += `<span id='split'>${splitText[i]}</span>`
     }
     // ^ Creating function that adds class of fade to the spans created above
     const onTick = () => {
-        const span = welcomeText.querySelectorAll("span")[char]
+        const span = welcomeText.querySelectorAll("#split")[char]
         span.classList.add('fade')
         // ^ Counts how many characters the span class has been added to
         char++
@@ -219,7 +219,6 @@ const colorArr = ['rgba(204, 0, 0, .5)', 'rgba(255, 153, 51, .5)', 'rgba(255, 25
 
 
 let colors = document.querySelector('.colors').children
-console.log(colors)
 Array.from(colors).forEach(color => color.style.backgroundColor = colorArr[color.id])
 
 
