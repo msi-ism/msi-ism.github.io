@@ -165,6 +165,9 @@ button {
     text-align: center;
     margin-top: 40px;
     font-family: 'Manrope';
+    background-image: -webkit-linear-gradient(#333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 

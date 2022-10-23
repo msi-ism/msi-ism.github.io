@@ -260,12 +260,12 @@ class Color {
 
 }
 
-const shadesOfRed = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', 'rgba(167, 0, 0)')
-const shadesOfOrange = new Color('orange', 'rgba(240, 161, 80, .75)', 'rgba(240, 128, 32, .75)', 'white', 'rgba(240, 117, 15)')
-const shadesOfYellow = new Color('yellow', 'rgba(255, 249, 174, .75)', 'rgba(233, 215, 0, .75)', 'white', 'rgba(233, 200, 0)')
-const shadesOfGreen = new Color('green', 'rgba(164, 251, 166,.75)', 'rgba(48, 203, 0, .75)', 'white', 'rgba(0, 98, 0)')
-const shadesOfBlue = new Color('blue', 'rgba(172, 203, 255, .75)', 'rgba(120, 170, 255, .75)', 'white', 'rgba(65, 136, 255)')
-const shadesOfViolet = new Color('violet', 'rgba(195, 112, 253, .75)', 'rgba(155, 58, 215, .75)', 'white', 'rgba(124, 0, 255)')
+const shadesOfRed = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', '-webkit-linear-gradient(#e04a4a, #c4357f, #a7202d)')
+const shadesOfOrange = new Color('orange', 'rgba(240, 161, 80, .75)', 'rgba(240, 128, 32, .75)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
+const shadesOfYellow = new Color('yellow', 'rgba(255, 249, 174, .75)', 'rgba(233, 215, 0, .75)', 'white', '-webkit-linear-gradient(#d9e04a, #c48f35, #a7a420)')
+const shadesOfGreen = new Color('green', 'rgba(164, 251, 166,.75)', 'rgba(48, 203, 0, .75)', 'white', '-webkit-linear-gradient(#97e04a, #4cc435, #a7a400)')
+const shadesOfBlue = new Color('blue', 'rgba(172, 203, 255, .75)', 'rgba(120, 170, 255, .75)', 'white', '-webkit-linear-gradient(#4acce0, #354ac4, #5c20a7)')
+const shadesOfViolet = new Color('violet', 'rgba(195, 112, 253, .75)', 'rgba(155, 58, 215, .75)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
 
 
 
@@ -276,6 +276,7 @@ const changeTheme = (Color) => {
     navBar.style.backgroundColor = Color.navColor
     navLogo.style.color = Color.accColor
     bigGuest.style.visibility = 'visible'
+    bigGuest.style.backgroundImage = Color.accColor
 }
 
 let redBtn = document.getElementById('0')
