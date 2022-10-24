@@ -286,7 +286,7 @@ const changeTheme = (Color) => {
     navLogo.style.color = Color.accColor
     bigGuest.style.visibility = 'visible'
     bigGuest.style.backgroundImage = Color.accColor
-    let aboutMe = document.querySelector('.two')
+    let aboutMe = document.querySelector('.about')
     aboutMe.style.display = 'block'
     clickCount++
     let doneBtn = document.querySelector('.done')

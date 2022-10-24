@@ -104,6 +104,8 @@ button {
     font-family: 'Manrope';
     font-weight: 700;
     font-size: 55px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .one > .sub-div {
@@ -136,6 +138,7 @@ button {
     display:none;
     text-align: center;
     margin-left: -18px;
+
 }
 
 
@@ -208,7 +211,8 @@ button {
 
 
 .guest-input > .guest-text {
-    color: white;
+    font-family: 'DM Sans';
+    color: black;
     font: 20px normal;
     border: none;
     resize: none;
@@ -221,7 +225,7 @@ button {
 }
 
 .enter-btn {
-    color: white;
+    color: black;
     font-family: 'Manrope';
     font: 20px normal;
     border: none;
@@ -244,6 +248,7 @@ span.fade {
 
 .one > .done {
     visibility: hidden;
+    padding: 10px;
     grid-row-start: 5;
     
 }
@@ -251,20 +256,24 @@ span.fade {
     font-family: 'DM-Sans', sans-serif !important;
     background-color: transparent;
     outline: none;
-    border: 1px solid black;
     padding: 10px;
-    width: auto;
-    height: auto;
+    min-width: 175px;
+    background-color: lightcoral;
 
 }
 
+.done > button:hover {
+    color: palegoldenrod;
+    cursor: pointer;
+}
 
-.container > .two {
+
+.container > .about {
     display: none;
 }
 
 
-.two > .project-div {
+.projects > .project-div {
     visibility: visible;
     flex-direction: column;
     color: white;
@@ -273,7 +282,6 @@ span.fade {
     padding: 50px;
     margin-top: 20px;
 
-    
 }
 
 .project-div > .project-box {
