@@ -320,3 +320,14 @@ animateText(introText)
 enterBtn.addEventListener('click', welcomeGuest)
 
 
+
+document.addEventListener('keypress', (e) => {
+    let name = e.key
+    let code = e.code
+    // alert(`Key pressed ${name} \r\n Key code value: ${code}`); }, false)
+    if (name === 'Enter') {
+        console.log(e.key)
+        enterBtn.click()
+    }
+})
+

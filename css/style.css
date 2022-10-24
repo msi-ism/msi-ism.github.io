@@ -131,11 +131,14 @@ button {
     margin-top: 10px;
     width: auto;
     display: none;
+    transition: display 2s;
     text-align: center;
 }
 
 .guest-input {
     display:none;
+    transition: display 2s;
+    transition-timing-function: ease-in-out;
     text-align: center;
     margin-left: -18px;
 
@@ -146,7 +149,7 @@ button {
 .hand-shake {
     visibility: hidden;
     font-size: 150px;
-    padding: 5px;
+
     margin-left: 30px;
     grid-column-start: 2;
     animation: none;
