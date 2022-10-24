@@ -98,7 +98,12 @@ button {
     padding: 0px;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
     text-align: center;
-    
+}
+
+.section-header {
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 55px;
 }
 
 .one > .sub-div {
