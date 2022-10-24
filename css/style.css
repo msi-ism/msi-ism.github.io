@@ -9,6 +9,7 @@
     width: auto;
 }
 
+
 h2 {
     font-family: 'DM Sans', sans-serif;
 }
@@ -48,19 +49,42 @@ button {
     font-family: 'DM-Sans', sans-serif !important;
 }
 .container {
-    display: flex;
+    height: 100vh;
+    width: 100%;
     flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
 }
 
-.container >  .title-div {
+.container > section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+
+.container > .one {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.one >  .title-div {
     display: grid;
     grid-template-columns: 1fr .5fr;
     grid-template-rows: 1;
+    grid-row-start: 1;
     grid-gap: 2px;
-    margin-top: 35px;
     height: auto;
     width: auto;
     align-items: center;
+    margin-top: 100px;
 }
 
 .title-div > .welcome-text {
@@ -77,15 +101,17 @@ button {
     
 }
 
-.container > .sub-div {
+.one > .sub-div {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1;
     grid-gap: 2px;
+    grid-row-start: 2;
     margin-top: 25px;
     height: auto;
     width: auto;
     align-items: center;
+    margin-top: -10px;
 
 }
 
@@ -108,10 +134,12 @@ button {
 }
 
 
+
 .hand-shake {
     visibility: hidden;
-    font-size: 175px;
-    padding: 20px;
+    font-size: 150px;
+    padding: 5px;
+    margin-left: 30px;
     grid-column-start: 2;
     animation: none;
     animation-iteration-count: 2;
@@ -133,12 +161,14 @@ button {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-.colors {
+.one > .colors {
     display: none;
     flex-direction: row;
+    grid-row-start: 3;
     justify-content: space-around;
     margin-left: 18px;
     margin-top: 10px;
+    width: 100%;
     
 }
 
@@ -159,11 +189,12 @@ button {
     cursor: pointer;
 }
 
-.big-guest {
+.one > .big-guest {
     visibility: hidden;
     font-size: 200px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: -30px;
+    grid-row-start: 4;
     font-family: 'Manrope';
     background-image: -webkit-linear-gradient(#333);
     -webkit-background-clip: text;
@@ -206,8 +237,30 @@ span.fade {
     opacity: 1;
 }
 
-.container > .project-div {
+.one > .done {
+    visibility: hidden;
+    grid-row-start: 5;
+    
+}
+.done > button {
+    font-family: 'DM-Sans', sans-serif !important;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid black;
+    padding: 10px;
+    width: auto;
+    height: auto;
+
+}
+
+
+.container > .two {
     display: none;
+}
+
+
+.two > .project-div {
+    visibility: visible;
     flex-direction: column;
     color: white;
     background-color: black;
