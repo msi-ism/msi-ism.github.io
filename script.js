@@ -1,3 +1,4 @@
+
 console.log('script running...')
 
 const hamburger = document.querySelector('.hamburger')
@@ -204,7 +205,11 @@ let colorText = "What's your favorite color?"
 const enterBtn = document.querySelector('.enter-btn')
 enterBtn.addEventListener('click', getGuest)
 
+
 let guestWelcomed = false
+const checkWelcome = () => {
+    return guestWelcomed = true
+}
 
 
 const displayElement = (ele) => {
@@ -218,6 +223,7 @@ let logoName = document.querySelector('.logo-name')
 let bigGuest = document.querySelector('.big-guest')
 
 const welcomeGuest = () => {
+    clickCount++
     let thankYouText = 'Thanks for visiting my portfolio.'
     let colorEle = document.querySelector('.colors')
     let guestName = getGuest() 
@@ -228,15 +234,15 @@ const welcomeGuest = () => {
     guestBox.value = ''
     guestQuestion.style.display = '',
     guestInput.style.display = ''
-    guestWelcomed = true
     animateText(greetingText)
     setTimeout(function () { animateText(thankYouText); }, 2500)
     setTimeout(function () {hand.textContent = '🤝'}, 2000)
     setTimeout(handShake, 2000)
     setTimeout(function () { animateSubText(colorText); }, 4500)
     setTimeout(function () { displayElement(colorEle); }, 7000)
-
+    setTimeout(checkWelcome, 7000)
 }
+
 
 
 // * Assigning colors to buttons
@@ -278,7 +284,7 @@ const colorChoiceText = () => {
 }
 
 
-
+let colorChoice = 0
 let clickCount = 0
 const changeTheme = (Color) => {
     let body = document.querySelector('body')
@@ -290,13 +296,14 @@ const changeTheme = (Color) => {
     bigGuest.style.backgroundImage = Color.accColor
     let aboutMe = document.querySelector('.about')
     aboutMe.style.display = 'block'
-    clickCount++
     let doneBtn = document.querySelector('.done')
     doneBtn.style.visibility = 'visible'
     hand.textContent = '🎉'
-    if (clickCount <= 1) {
+    colorChoice++
+    if (guestWelcomed && clickCount === 1 && colorChoice < 2) {
         colorChoiceText()
     }
+    console.log(clickCount)
 }
 
 let redBtn = document.getElementById('0')
@@ -327,10 +334,11 @@ enterBtn.addEventListener('click', welcomeGuest)
 document.addEventListener('keypress', (e) => {
     let name = e.key
     let code = e.code
+    console.log(e.key)
     // alert(`Key pressed ${name} \r\n Key code value: ${code}`); }, false)
     if (clickCount < 1 && name === 'Enter') {
-        console.log(e.key)
         enterBtn.click()
+        console.log(clickCount)
     }
 })
 
