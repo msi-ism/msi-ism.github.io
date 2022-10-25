@@ -57,7 +57,6 @@ button {
     font-weight: 700;
     font-size: 70px;
     text-align: center;
-    margin-top: 35px;
 }
 
 /* * Main container */
@@ -282,16 +281,18 @@ span.fade {
 }
 
 
-.container > .about {
-    display: none;
-}
 
 
 /* * Starts about div */
 
+.container > .about {
+    /* display: none; */
+}
+
 .about-header {
     text-align: center;
     grid-column-start: 2;
+    margin-top: -15px;
 }
 
 
@@ -307,6 +308,7 @@ span.fade {
     text-align: center;
     font-size: 35px;
     font-family: 'DM Sans';
+    margin-top: -40px;
 
 }
 
@@ -315,12 +317,31 @@ span.fade {
     grid-column-end: 4;
     grid-row-start: 2;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 75px;
     font-size: 20px;
     margin-left: 35px;
     margin-right: 35px;
-
 }
+
+.about-container > .about-sub {
+    text-align: center;
+    font-family: 'DM Sans';
+}
+
+.about-container > .about-sub1 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+.about-container > .about-sub2 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+.about-container > .about-sub3 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+
 
 .projects > .project-div {
     visibility: visible;

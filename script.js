@@ -223,13 +223,14 @@ const welcomeGuest = () => {
     let guestName = getGuest() 
     bigGuest.textContent = guestName
     greetingText = `Nice to meet you, ${guestName}!`
-    navLogo.textContent = `Welcome, ${guestName}`
+    navLogo.textContent = `Welcome, ${guestName} 👋🏾`
     guestBox.value = ''
     guestQuestion.style.display = '',
     guestInput.style.display = ''
     guestWelcomed = true
     animateText(greetingText)
     setTimeout(function () { animateText(thankYouText); }, 2500)
+    setTimeout(function () {hand.textContent = '🤝'}, 2000)
     setTimeout(handShake, 2000)
     setTimeout(function () { animateSubText(colorText); }, 4500)
     setTimeout(function () { displayElement(colorEle); }, 7000)
@@ -291,6 +292,7 @@ const changeTheme = (Color) => {
     clickCount++
     let doneBtn = document.querySelector('.done')
     doneBtn.style.visibility = 'visible'
+    hand.textContent = '🎉'
     if (clickCount <= 1) {
         colorChoiceText()
     }
