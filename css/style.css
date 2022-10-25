@@ -40,6 +40,8 @@ body {
     position: relative;
     /* background: rgba(233, 222, 111, .5); */
     background: white;
+    display: flex;
+    flex-direction: column;
 }
 header {
     background: rgb(46,26,71);
@@ -56,24 +58,25 @@ button {
     font-weight: 700;
     font-size: 70px;
     text-align: center;
-    margin-top: 50px;
+    margin-bottom: -45px;
 }
 
 /* * Main container */
 
 .container {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     flex-direction: column;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scroll-padding: 55px;
+    scroll-padding: 35px;
+
 
 }
 
 .container > section {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,7 +104,8 @@ button {
     height: 200px;
     width: auto;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 25px;
 }
 
 .title-div > .welcome-text {
@@ -110,7 +114,7 @@ button {
     font-family: 'Manrope';
     font-weight: 700;
     color: rgba(0, 0, 0, .7);
-    font-size: 70px;
+    font-size: 55px;
     margin-left: 0px;
     margin-bottom: 0px;
     padding: 0px;
@@ -151,7 +155,7 @@ button {
     color: rgba(0, 0, 0, .7);;
     margin-left: 0px;
     font-family: 'DM Sans', sans-serif;
-    font-size: 32px;
+    font-size: 30px;
     margin-top: 10px;
     width: auto;
     display: none;
@@ -159,7 +163,7 @@ button {
     text-align: center;
 }
 
-.guest-input {
+.sub-div > .guest-input {
     display:none;
     transition: display 2s;
     transition-timing-function: ease-in-out;
@@ -213,7 +217,7 @@ button {
 
 .one > .big-guest {
     visibility: hidden;
-    font-size: 200px;
+    font-size: 175px;
     text-align: center;
     margin-top: -30px;
     grid-row-start: 4;
@@ -221,6 +225,7 @@ button {
     background-image: -webkit-linear-gradient(#333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 
 
@@ -265,6 +270,7 @@ span.fade {
     visibility: hidden;
     padding: 10px;
     grid-row-start: 5;
+    margin-top: -50px;
     
 }
 .done > button {
@@ -289,51 +295,61 @@ span.fade {
 
 .container > .about {
     /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
 }
 
-.about-header {
-    text-align: center;
-    grid-column-start: 2;
-    margin-top: -15px;
-}
-
-
-.about-container {
+.about > .about-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.about-container > .about-header {
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    margin-bottom: -45px;
+}
+
+
+
 .about-container > .about-t {
     grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 2;
     text-align: center;
     font-size: 35px;
     font-family: 'DM Sans';
-    margin-top: -40px;
+    margin-top: -100px;
 
 }
 
 .about-sub > .about-sub-t {
     margin-bottom: 20px;
-
 }
 
 .about-container > p {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     grid-row-start: 2;
     text-align: center;
-    margin-top: 75px;
     font-size: 20px;
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: 55px;
+    margin-right: 55px;
 }
 
 .about-container > .about-sub {
     text-align: center;
     font-family: 'DM Sans';
     padding: 10px;
+    border: 2px solid black;
+    height: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -40px;
 }
 
 .about-container > .about-sub1 {
@@ -347,6 +363,15 @@ span.fade {
 .about-container > .about-sub3 {
     grid-column-start: 3;
     grid-row-start: 3;
+}
+.about-container > .about-sub4 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+.about-sub > .about-img {
+    height: 100px;
+
 }
 
 
