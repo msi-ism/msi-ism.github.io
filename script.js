@@ -224,6 +224,7 @@ const welcomeGuest = () => {
     bigGuest.textContent = guestName
     greetingText = `Nice to meet you, ${guestName}!`
     navLogo.textContent = `Welcome, ${guestName} 👋🏾`
+    hand.textContent =''
     guestBox.value = ''
     guestQuestion.style.display = '',
     guestInput.style.display = ''

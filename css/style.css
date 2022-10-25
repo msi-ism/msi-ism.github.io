@@ -57,6 +57,7 @@ button {
     font-weight: 700;
     font-size: 70px;
     text-align: center;
+    margin-top: 50px;
 }
 
 /* * Main container */
@@ -71,7 +72,7 @@ button {
 }
 
 .container > section {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -88,6 +89,7 @@ button {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     flex-direction: column;
     justify-items: center;
+    height: 100vh;
 }
 
 .one >  .title-div {
@@ -96,7 +98,7 @@ button {
     grid-template-rows: 1;
     grid-row-start: 1;
     grid-gap: 2px;
-    height: auto;
+    height: 200px;
     width: auto;
     align-items: center;
     margin-top: 100px;
