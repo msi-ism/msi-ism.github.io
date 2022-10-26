@@ -36,33 +36,31 @@ document.querySelectorAll(".nav-link").forEach(n => n, addEventListener('click',
 //  ^ Creating class constructor for projects
 
 class Project {
-    constructor(title, imgSrc, linkSrc, technologies) {
+    constructor(title, imgSrc, appSrc, appRepo, technologies) {
         this.title = title
         this.imgSrc = imgSrc
-        this.linkSrc = linkSrc
+        this.appSrc = appSrc
+        this.appRepo = appRepo
         this.technologies = technologies
     }
 }
 
-const simonApp = new Project('Simon (Sinclair) Says!(Work in Progress)', './images/ss-new-ui.png', 'https://msi-ism.github.io/projects/simon-game/', 'Javascript, CSS, HTML')
-const passwordApp = new Project('Password Generator (Work in Progress)', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'Javascript, Canvas, CSS, HTML')
+const simonApp = new Project('Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML')
+const passwordApp = new Project('Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML')
 
 const projectBox = document.querySelector('.project-box')
-
-
 const createProject = (Project) => {
     let newTable = document.createElement('table')
-    newTable.style.border = '3px solid black'
     newTable.style.backgroundColor = 'white'
     newTable.style.boxShadow = '0px 0px 20px 5px rgba(253, 245, 232, 0.5)'
     newTable.style.color = 'black'
     newTable.classList.add('project-table')
     let row1 = newTable.insertRow()
-    row1.innerHTML = `<h3>${Project.title}</h3>`
+    row1.innerHTML = `<a href=${Project.appSrc} target="_blank"><h3>${Project.title}</h3></a>`
     let row2 = newTable.insertRow()
-    row2.innerHTML = `<img class='project-img' src=${Project.imgSrc}>`
+    row2.innerHTML = `<a href=${Project.appSrc} target="_blank"><img class='project-img' src=${Project.imgSrc}></a>`
     let row3 = newTable.insertRow()
-    row3.innerHTML = `<a href=${Project.linkSrc}></a>`
+    row3.innerHTML = `<a href=${Project.appRepo} target="_blank">Repo</a>`
     let row4 = newTable.insertRow()
     row4.textContent = 'Technologies:'
     row4.style.fontFamily = "'DM Sans', sans-serif"
