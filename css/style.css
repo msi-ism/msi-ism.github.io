@@ -15,7 +15,9 @@ h2 {
     font-family: 'DM Sans', sans-serif;
 }
 
-
+h4 {
+    font-size: 15px;
+}
 
 a {
     font-family: 'DM Sans', sans-serif;
@@ -59,6 +61,7 @@ button {
     font-size: 70px;
     text-align: center;
     margin-bottom: -45px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
 }
 
 /* * Main container */
@@ -324,6 +327,7 @@ span.fade {
     grid-column-end: 5;
     grid-row-start: 3;
     height: 100%;
+    width: 100%;
     margin-top: -125px;
 
 }
@@ -331,13 +335,15 @@ span.fade {
 .about-boxes > .about-sub {
     text-align: center;
     font-family: 'DM Sans';
-    padding: 10px;
+    padding: 15px;
     height: 100%;
     width: 20%;
-
     border: 2px solid black;
     display: block;
     background-color: white;
+    flex: auto;
+    margin: 20px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
 }
 
 .about-container > .about-t {
@@ -347,7 +353,8 @@ span.fade {
     text-align: center;
     font-size: 35px;
     font-family: 'DM Sans';
-    margin-top: -100px;
+    margin-top: -200px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
 
 }
 
@@ -363,15 +370,17 @@ span.fade {
     font-size: 20px;
     margin-left: 55px;
     margin-right: 55px;
+    margin-top: -100px;
 }
 
 
-
-
-
 .about-sub  > .about-sub-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
     border: 2px solid black;
-    height: auto;
+    height: 43%;
 }
 
 .about-container > .about-sub1 {
