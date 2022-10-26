@@ -52,7 +52,7 @@ const projectBox = document.querySelector('.project-box')
 const createProject = (Project) => {
     let newTable = document.createElement('table')
     newTable.style.backgroundColor = 'white'
-    newTable.style.boxShadow = '0px 0px 20px 5px rgba(253, 245, 232, 0.5)'
+    newTable.style.boxShadow = '0px 0px 15px 5px rgba(0, 0, 32, 0.5)'
     newTable.style.color = 'black'
     newTable.classList.add('project-table')
     let row1 = newTable.insertRow()
