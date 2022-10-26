@@ -298,6 +298,8 @@ const changeTheme = (Color) => {
     aboutMe.style.display = 'block'
     let doneBtn = document.querySelector('.done')
     doneBtn.style.visibility = 'visible'
+    let aboutBoxes = document.querySelectorAll('.about-sub')
+    aboutBoxes.forEach((box) => box.style.backgroundImage = Color.accColor)
     hand.textContent = '🎉'
     colorChoice++
     if (guestWelcomed && clickCount === 1 && colorChoice < 2) {

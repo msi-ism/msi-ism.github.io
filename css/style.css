@@ -343,7 +343,6 @@ span.fade {
     background-color: white;
     flex: auto;
     margin: 20px;
-    box-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
 }
 
 .about-container > .about-t {
@@ -378,7 +377,6 @@ span.fade {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     border: 2px solid black;
     height: 43%;
 }
