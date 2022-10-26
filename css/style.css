@@ -314,7 +314,25 @@ span.fade {
     margin-bottom: -45px;
 }
 
+.about-container > .about-boxes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
 
+.about-boxes > .about-sub {
+    text-align: center;
+    font-family: 'DM Sans';
+    padding: 10px;
+    height: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -40px;
+    border: 2px solid black;
+}
 
 .about-container > .about-t {
     grid-column-start: 2;
@@ -341,15 +359,12 @@ span.fade {
     margin-right: 55px;
 }
 
-.about-container > .about-sub {
-    text-align: center;
-    font-family: 'DM Sans';
-    padding: 10px;
+
+
+
+
+.about-sub  > .about-sub-box {
     border: 2px solid black;
-    height: auto;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-top: -40px;
 }
 
 .about-container > .about-sub1 {
