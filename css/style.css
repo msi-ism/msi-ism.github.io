@@ -318,7 +318,6 @@ span.fade {
     width: 100vw;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
@@ -395,7 +394,6 @@ span.fade {
     height: 100%;
     width: auto;
     border: 2px solid black;
-    display: block;
     background-color: white;
     flex: auto;
     margin: 0 20px;
