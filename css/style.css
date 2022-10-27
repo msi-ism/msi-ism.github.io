@@ -755,7 +755,9 @@ span.fade {
     
     .one > .big-guest {
         visibility: hidden;
-        font-size: 55px;
+        font-size: 60px;
+        height: auto;
+        width: 99vw;
         text-align: center;
         margin-top: -30px;
         grid-row-start: 4;
