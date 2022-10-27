@@ -281,7 +281,7 @@ const shadesOfViolet = new Color('violet', 'rgba(195, 112, 253, .75)', 'rgba(155
 const colorChoiceText = () => {
     animateSubText("Great choice!")
     setTimeout(function () { animateSubText("Feel free to pick another."); }, 2000)
-    setTimeout(function () { animateSubText("Whenever you're satisfied, click 'done' & I'll tell you a bit about myself."); }, 5000)
+    setTimeout(function () { animateSubText("When you're satisfied, scroll down to learn more about me!"); }, 5000)
 }
 
 
