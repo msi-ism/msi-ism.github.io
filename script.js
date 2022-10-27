@@ -47,6 +47,7 @@ class Project {
 
 const simonApp = new Project('Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML')
 const passwordApp = new Project('Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML')
+const blogApp = new Project('Notes App', './images/notes2self.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB')
 
 const projectBox = document.querySelector('.project-box')
 const createProject = (Project) => {
@@ -71,8 +72,10 @@ const createProject = (Project) => {
 
 const simonDOM = createProject(simonApp)
 const passDOM = createProject(passwordApp)
+const blogDOM = createProject(blogApp)
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(passDOM)
+projectBox.appendChild(blogDOM)
 
 
 // * Screen Text Animation Function
