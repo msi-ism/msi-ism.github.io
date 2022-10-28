@@ -719,6 +719,7 @@ span.fade {
         text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
         text-align: center;
         height: auto;
+        margin-left: 15px;
     
     }
     
@@ -846,7 +847,22 @@ span.fade {
         padding: 3px;
     }
 
+    .about > .about-container {
+        display: flex;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr; */
+        height: 99vh;
+        width: 100vw;
+        flex-direction: column;
+        align-content: center;
+        margin-bottom: 20px;
+    }
 
+
+    .about-container > .profile-pic {
+        height: 100px;
+        width: auto;
+    }
 
 
     .about-container > p {
@@ -855,9 +871,10 @@ span.fade {
         font-size: 14px;
         height: auto;
         width: auto;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 25px;
         margin-right: 25px;
+        margin-bottom: -20px;
         order: 2;
     }
     
@@ -868,7 +885,6 @@ span.fade {
         flex-direction: column;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-around;
         /* grid-column-start: 1;
         grid-column-end: 5;
         grid-row-start: 3; */
@@ -876,6 +892,7 @@ span.fade {
         width: 100vw;
         margin-left: 20px;
         margin-right: 20px;
+        
     
       
     }
@@ -889,7 +906,7 @@ span.fade {
         justify-items: center;
         text-align: center;
         font-family: 'DM Sans';
-        height: 150px;
+        height: 125px;
         width: 80vw;
         border: 2px solid black;
         background-color: white;
@@ -905,9 +922,9 @@ span.fade {
         justify-content: center;
         flex-direction: column;
         border: 2px solid black;
-        height: 80px;
-        width: 100px;
-        padding: 5px;
+        height: 70px;
+        width: auto;
+        padding: 10px;
         background-color:rgba(255, 255, 255, 0.1);
         font-size: 10px;
     }
@@ -918,11 +935,11 @@ span.fade {
         width: 100%;
         grid-column-start: 1;
         grid-column-end: 3;
-        margin-top: 7px;
+        margin-top: 15px;
     }
     
     .about-sub > .about-img {
-        height: 75px;
+        height: 70px;
         width: auto;
         grid-row-start: 2;
         grid-column-start: 1;
