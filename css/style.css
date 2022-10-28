@@ -125,7 +125,7 @@ button {
     font-family: 'Manrope';
     font-weight: 700;
     color: rgba(0, 0, 0, .7);
-    font-size: 50px;
+    font-size: 5vw;
     padding: 0px;
     text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
     text-align: center;
@@ -135,7 +135,7 @@ button {
 
 .title-div > .hand-shake {
     visibility: hidden;
-    font-size: 95px;
+    font-size: 10vw;
     margin-left: 20px;
     grid-column-start: 3;
     animation: none;
@@ -203,7 +203,8 @@ button {
     flex-direction: row;
     grid-row-start: 3;
     justify-content: space-around;
-    margin-left: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 10px;
     width: 100%;
     
@@ -213,11 +214,11 @@ button {
 .colors > button {
     background-color: transparent;
     outline: none;
-    border: 1px solid black;
     padding: 10px;
     width: 15%;
-    height: auto;
-    font-family: 'DM Sans', sans-serif;
+    height: 5vh;
+    font-family: 'Comic Sans';
+    font-size: 0;
 
 }
 
@@ -324,52 +325,52 @@ span.fade {
 
 .about-container > .about-header {
     text-align: center;
-    /* grid-column-start: 2;
-    grid-column-end: 4; */
     position: relative;
     order: 1;
     margin-bottom: 0px;
-
-    /* margin-bottom: -45px; */
+    height: 1fr;
 }
 
+.about-container > .profile-pic {
+    max-width: 200px;
+    border: 5px solid black;
+    border-radius: 50%;
+    order: 2;
+    height: 1fr;
+}
 
-
-
-.about-container > .about-t {
-    /* flex-shrink: 0;
+/* .about-container > .about-t {
+    flex-shrink: 0;
     grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: 2; */
+    grid-row-start: 2;
     text-align: center;
     font-size: 35px;
     font-family: 'DM Sans';
     text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
-    order: 2;
     width: auto;
-    
-}
+} */
 
 .about-sub > .about-sub-t {
     margin-bottom: 20px;
-    position: fixed;
+  
 }
 
 .about-container > p {
     position: relative;
     text-align: center;
-    font-size: 18px;
-    height: auto;
+    font-size: 20px;
+    height: 1fr;
     width: auto;
     margin-top: 20px;
-    margin-left: 25px;
-    margin-right: 25px;
-    order: 2;
+    margin-left: 35px;
+    margin-right: 35px;
+    order: 3;
 }
 
 
 .about-container > .about-boxes {
-    order: 3;
+    order: 4;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -384,7 +385,6 @@ span.fade {
     margin-left: 20px;
     margin-right: 20px;
 
-  
 }
 
 
@@ -392,7 +392,7 @@ span.fade {
     text-align: center;
     font-family: 'DM Sans';
     padding: 20px;
-    height: 100%;
+    height: 1fr;
     width: auto;
     border: 2px solid black;
     background-color: white;
@@ -450,34 +450,44 @@ span.fade {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     width: 100vw;
+    justify-content: space-around;
 }
 
 .projects-container > .project-header {
     text-align: center;
-    flex: 1;
+    height: auto;
+    order: 1;
 
 }
 
 .projects-container > p {
-    flex: initial;
+    order: 2;
+    flex: flex-end;
     text-align: center;
     font-size: 20px;
     margin-left: 55px;
     margin-right: 55px;
+    height: auto;
+    margin-bottom: -35px;
+
 }
 
 .projects-container > .project-box {
-    flex: 3;
+    order: 3;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    gap: 0px;
-    height: auto;
+    height: 450px;
     width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    background-color: white;
+    margin-bottom: 65px;
+    padding: 10px;
+    box-shadow: inset 0 0 10px 'black';
 
 }
 
@@ -486,12 +496,11 @@ span.fade {
     text-align: center;
     width: 250px;
     font-family: 'DM Sans';
-    padding: 25px;
+    padding: 20px;
     border: 1px solid black;
     background-color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     
-
 }
 
 
@@ -837,6 +846,9 @@ span.fade {
         padding: 3px;
     }
 
+
+
+
     .about-container > p {
         position: relative;
         text-align: center;
@@ -862,7 +874,6 @@ span.fade {
         grid-row-start: 3; */
         height: auto;
         width: 100vw;
-        margin-top: 50px;
         margin-left: 20px;
         margin-right: 20px;
     
@@ -871,35 +882,53 @@ span.fade {
     
     
     .about-boxes > .about-sub {
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1f 1f;
         align-content: center;
+        justify-items: center;
         text-align: center;
         font-family: 'DM Sans';
-        padding: 20px;
         height: 150px;
-        width: auto;
+        width: 80vw;
         border: 2px solid black;
         background-color: white;
-        flex: auto;
-        margin: 5px;
-        margin-top: -10px;
+        margin-bottom: 10px;
         box-shadow: 0px 0px 7px 5px rgba(0, 0, 32, 0.2);
     }
     
     .about-sub  > .about-sub-box {
         display: flex;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
-        flex-wrap: wrap;
         border: 2px solid black;
         height: 80px;
-        margin: 15px;
+        width: 100px;
         padding: 5px;
         background-color:rgba(255, 255, 255, 0.1);
-        font-size: 12px;
+        font-size: 10px;
+    }
+
+    .about-sub > .about-sub-t {
+        font-size: 16px;
+        align-self: center;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-top: 7px;
     }
     
+    .about-sub > .about-img {
+        height: 75px;
+        width: auto;
+        grid-row-start: 2;
+        grid-column-start: 1;
+        
+    
+    }
     .about-container > .about-sub1 {
         grid-column-start: 1;
         grid-row-start: 3;
@@ -917,11 +946,6 @@ span.fade {
         grid-row-start: 3;
     }
     
-    .about-sub > .about-img {
-        height: 100px;
-        margin-bottom: 25px;
-    
-    }
     .nav-logo {
         font-size: 6vw;
         color: white !important;

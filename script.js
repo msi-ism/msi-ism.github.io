@@ -313,6 +313,8 @@ const changeTheme = (Color) => {
     let aboutBoxes = document.querySelectorAll('.about-sub')
     aboutBoxes.forEach((box) => box.style.backgroundImage = Color.accColor)
     hand.textContent = '🎉'
+    let projectBox = document.querySelector('.project-box')
+    projectBox.style.backgroundColor = Color.bgColor
     colorChoice++
     if (guestWelcomed && clickCount === 1 && colorChoice < 2) {
         colorChoiceText()
