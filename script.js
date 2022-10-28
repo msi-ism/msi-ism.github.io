@@ -314,6 +314,8 @@ const changeTheme = (Color) => {
     hand.textContent = '🎉'
     let projectBox = document.querySelector('.project-box')
     projectBox.style.backgroundColor = Color.bgColor
+    let profilePic = document.querySelector('.pp-div')
+    profilePic.style.background = Color.accColor
     colorChoice++
     if (guestWelcomed && clickCount === 1 && colorChoice < 2) {
         colorChoiceText()
