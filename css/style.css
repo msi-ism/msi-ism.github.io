@@ -27,7 +27,7 @@ h3 {
 }
 
 h4 {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 a {
@@ -927,7 +927,7 @@ span.fade {
     
     .pp-div> .profile-pic {
         height: auto;
-        width: 75px;
+        width: 99px;
         border: .25px solid;
         border-radius: 100%;
         order: 2;
@@ -1101,8 +1101,10 @@ span.fade {
         background-color: white;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
         font-size: 12px;
+    }
 
-    
+    h4 {
+        font-size: 12px;
     }
     
     
