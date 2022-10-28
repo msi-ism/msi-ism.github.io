@@ -918,7 +918,7 @@ span.fade {
     
     .pp-div> .profile-pic {
         height: auto;
-        width: 150px;
+        width: 100px;
         border: .25px solid;
         border-radius: 100%;
         order: 2;
