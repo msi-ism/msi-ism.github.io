@@ -36,18 +36,19 @@ document.querySelectorAll(".nav-link").forEach(n => n, addEventListener('click',
 //  ^ Creating class constructor for projects
 
 class Project {
-    constructor(title, imgSrc, appSrc, appRepo, technologies) {
+    constructor(title, imgSrc, appSrc, appRepo, technologies, competencies) {
         this.title = title
         this.imgSrc = imgSrc
         this.appSrc = appSrc
         this.appRepo = appRepo
         this.technologies = technologies
+        this.competencies = competencies
     }
 }
 
-const simonApp = new Project('Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML')
-const passwordApp = new Project('Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML')
-const blogApp = new Project('Notes App', './images/notes2self.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB')
+const simonApp = new Project('Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML', 'Asynchronous Programming, Game Logic, Game Design, UI Design')
+const passwordApp = new Project('Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'Algorithms, Canvas, DOM Manipulation')
+const blogApp = new Project('Notes App', './images/notes2self.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB', 'User Authentication, CRUD Functionality, Server-side Rendering')
 
 const projectBox = document.querySelector('.project-box')
 const createProject = (Project) => {
@@ -65,8 +66,18 @@ const createProject = (Project) => {
     let row4 = newTable.insertRow()
     row4.textContent = 'Technologies:'
     row4.style.fontFamily = "'DM Sans', sans-serif"
+    row4.style.textDecoration = 'underline'
     let row5 = newTable.insertRow()
     row5.innerHTML = `<p>${Project.technologies}</p>`
+    let row6 = newTable.insertRow()
+    row6.textContent = 'Competencies Displayed:'
+    row6.style.fontFamily = "'DM Sans', sans-serif"
+    row6.style.textDecoration = 'underline'
+    let row7 = newTable.insertRow()
+    row7.innerHTML = `<p>${Project.competencies}</p>`
+
+
+
     return newTable
 }
 
