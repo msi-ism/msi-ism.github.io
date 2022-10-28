@@ -47,7 +47,7 @@ class Project {
     }
 }
 
-const simonApp = new Project('Game', 'Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML', 'Asynchronous Programming, Game Design, UI Design')
+const simonApp = new Project('Memory Game/Instrument ', 'Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML', 'Asynchronous Programming, Game Design, UI Design')
 const passwordApp = new Project('Utility','Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'Algorithms, Canvas, DOM Manipulation')
 const blogApp = new Project('Blog', 'Notes App', './images/notes2self.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB', 'User Authentication, CRUD Functionality, Server-side Rendering')
 
