@@ -230,8 +230,11 @@ const displayElement = (ele) => {
 
 let navLogo = document.querySelector('.nav-logo')
 let logoName = document.querySelector('.logo-name')
-
 let bigGuest = document.querySelector('.big-guest')
+
+
+
+
 
 const welcomeGuest = () => {
     clickCount++

@@ -83,7 +83,7 @@ button {
     flex-direction: column;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scroll-padding: 10em;
+    scroll-padding: 8em;
     /* scroll-padding: 35px; */
  
 }
@@ -95,6 +95,7 @@ button {
     justify-content: center;
     align-items: center;
     scroll-snap-align: center;
+    scroll-margin: 2em;
 
 }
 
