@@ -17,10 +17,13 @@ input {
 }
 
 
-
 .row-title{
     display: inline-flex;
     column-gap: 5px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -90,7 +93,7 @@ button {
     flex-direction: column;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scroll-padding: 8em;
+    scroll-padding: 2em;
     /* scroll-padding: 35px; */
  
 }
