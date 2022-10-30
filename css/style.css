@@ -10,10 +10,10 @@
 
 }
 
-select,
-textarea,
+
 input {
   font-size: 16px;
+  font-family: 'Helvetica';
 }
 
 
@@ -99,7 +99,7 @@ button {
 }
 
 .container > section {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -259,9 +259,9 @@ button {
 
 
 .guest-input > .guest-text {
-    font-family: 'DM Sans';
+    font-family: 'Helvetica';
     color: black;
-    font: 20px normal;
+    font-size: 20px;
     border: none;
     resize: none;
     margin-left: 18px;
@@ -276,7 +276,7 @@ button {
 .enter-btn {
     color: black;
     font-family: 'Manrope';
-    font: 20px normal;
+    font-size: 20px;
     border: none;
     resize: none;
     display: inline-block;
@@ -832,6 +832,7 @@ span.fade {
         transition-timing-function: ease-in-out;
         text-align: center;
         margin-left: -18px;
+        font-size: 22px;
     
     }
     .one > .colors {
@@ -882,9 +883,9 @@ span.fade {
     
     
     .guest-input > .guest-text {
-        font-family: 'DM Sans';
+        font-family: 'Helvetica';
         color: black;
-        font: 20px normal;
+        font-size: 20px normal;
         border: none;
         resize: none;
         margin-left: 18px;
