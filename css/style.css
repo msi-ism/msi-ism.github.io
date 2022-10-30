@@ -93,7 +93,7 @@ button {
     flex-direction: column;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scroll-padding: 30vh;
+    scroll-padding: 10vh;
     /* scroll-padding: 35px; */
  
 }
