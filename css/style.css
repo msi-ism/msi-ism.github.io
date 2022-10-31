@@ -46,7 +46,7 @@ a {
 }
 
 nav {
-    background-color: rgba(103, 57, 129, .9);
+    background-color: rgba(49, 17, 67, 0.9);
 }
 
 p {
@@ -660,14 +660,26 @@ span.fade {
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+
+    .navbar {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        min-height: 70px;
+        justify-content: right;
+        align-items: center;
+        padding: 0 24px;
+        width: 100vw;
+    }
+
     .nav-menu {
         /* ^ Keeps navbar on screen while scrolling until a link is click */
         position: fixed;
         right: -100%;
         top: 70px;
         gap: 0;
+        color: white;
         flex-direction: column;
-        background-color: plum;
+        background-color: blueviolet;
         width: 100%;
         transition: 0.3s;
     }
@@ -676,8 +688,11 @@ span.fade {
         margin: 16px 0;
     }
     .nav-menu.active {
-        right: 0;
+        right: 0;   
     }
+
+
+    
 
     .container {
         /* change below to 100vh to enable scroll-snap-type:  */
@@ -687,9 +702,7 @@ span.fade {
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
         /* scroll-padding: 35px; */
-     
-    
-    
+
     }
     
     .container > section {
@@ -1112,7 +1125,6 @@ span.fade {
         width: 85vw;
         font-family: 'DM Sans';
         border: 1px solid black;
-        background-color: white;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
         font-size: 11px;
     }
