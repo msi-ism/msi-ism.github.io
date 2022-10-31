@@ -44,6 +44,11 @@ a {
     font-family: 'DM Sans', sans-serif;
     
 }
+
+nav {
+    background-color: rgba(103, 57, 129, .9);
+}
+
 p {
     font-size: 1em;
     font-family: 'DM Sans', sans-serif;
@@ -60,14 +65,12 @@ ul {
     color: black;
 }
 body {
-    /* background: rgba(233, 222, 111, .5); */
     background: white;
     display: flex;
     flex-direction: column;
     width: auto;
 }
 header {
-    background: rgb(46,26,71);
     min-height: 50px;
     width: 100vw;
 }
@@ -128,11 +131,11 @@ button {
     grid-template-rows: 1;
     grid-row-start: 1;
     grid-gap: 2px;
-    height: auto;
+    height: 40vh;
     width: 100vw;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 5px;
 }
 
 .title-div > .welcome-text {
@@ -146,6 +149,7 @@ button {
     text-shadow: 4px 4px 7px rgba(0, 0, 0, .3);
     text-align: center;
     height: auto;
+    width: 2fr;
 
 }
 
@@ -169,7 +173,6 @@ button {
     grid-template-rows: 1;
     grid-gap: 2px;
     grid-row-start: 2;
-    margin-top: 25px;
     height: auto;
     width: auto;
     align-items: center;
@@ -233,7 +236,6 @@ button {
     padding: 10px;
     width: 15%;
     height: 5vh;
-    font-family: 'Comic Sans';
     font-size: 0;
 
 }
@@ -246,14 +248,16 @@ button {
 .one > .big-guest {
     visibility: hidden;
     font-size: 175px;
+    font-weight: 700;
     text-align: center;
-    margin-top: -30px;
+    margin-top: -20px;
     grid-row-start: 4;
     font-family: 'Manrope';
     width: 99vw;
     background-image: -webkit-linear-gradient(#333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  color: #232d2d;
     
 }
 
@@ -480,17 +484,18 @@ span.fade {
 .projects > .projects-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space;
     height: 100vh;
     width: 100vw;
-    justify-content: space-around;
 }
 
 .projects-container > .project-header {
     text-align: center;
     height: auto;
     order: 1;
-    margin-top: -20px;
+    margin-bottom: 1%;
 
 }
 
@@ -501,42 +506,40 @@ span.fade {
     font-size: 20px;
     margin-left: 55px;
     margin-right: 55px;
-    margin-top: -60px;
     height: auto;
     width: 50%;
-    margin-bottom: -20px;
+
 
 }
-
 .projects-container > .project-box {
     order: 3;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
-    align-items: center;
-    justify-content: space;
-    overflow-x: auto;
     flex-wrap: nowrap;
-    background-color: white;
-    margin-top: -50px;
-    margin-bottom: 25px;
-    padding: 10px;
-    box-shadow: inset 0 0 10px 'black';
+    overflow-x: auto;
+    height: auto;
+    width: 100vw;
+    margin-top: 25px;
+    box-shadow: inset 0 10px 20px 'black';
 
 }
 
 
 .project-box > .project-table {
+    order: 3;
     display: inline-block;
     overflow-wrap: wrap;
     text-align: center;
-    height: 400px;
-    width: 400px;
-    margin-left: 30px;
+    height: 100%;
+    width: auto;
     font-family: 'DM Sans';
     padding: 15px;
     border: 1px solid black;
     background-color: white;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    margin-left: 10px;
+    margin-right: 10px;
     
 }
  h3 {
@@ -546,10 +549,9 @@ span.fade {
 
 
 .project-img {
-    width: 100%;
-    max-height: 200px;
+    width: 28vw;
+    height: auto;
 }
-
 
 
 .img-container {
@@ -885,7 +887,7 @@ span.fade {
     .guest-input > .guest-text {
         font-family: 'Helvetica';
         color: black;
-        font-size: 20px normal;
+        font-size: 20px;
         border: none;
         resize: none;
         margin-left: 18px;
@@ -900,7 +902,7 @@ span.fade {
     .enter-btn {
         color: black;
         font-family: 'Manrope';
-        font: 20px normal;
+        font-size: 20px;
         border: none;
         resize: none;
         display: inline-block;
@@ -932,7 +934,7 @@ span.fade {
         margin-top: -14vh;
         padding: 3px;
         order: 2;
-        border: .25px solid;
+        border: 0px solid transparent;
         border-radius: 100%;
         border-image-slice: 1;
         background: -webkit-linear-gradient(#000, #000, #000);
@@ -941,7 +943,7 @@ span.fade {
     .pp-div> .profile-pic {
         height: auto;
         max-width: 30vw;
-        border: .25px solid;
+        border: 2px solid transparent;
         border-radius: 100%;
         order: 2;
     
@@ -1065,7 +1067,7 @@ span.fade {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space;
+        justify-content: space-evenly;
         height: 100vh;
         width: 100vw;
     }
@@ -1092,7 +1094,6 @@ span.fade {
         flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
-        scrollbar-arrow-color: #e04a4a;
         height: auto;
         width: 100vw;
         background-color: white;

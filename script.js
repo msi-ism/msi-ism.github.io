@@ -51,6 +51,8 @@ const simonApp = new Project('Memory Game/Instrument ', 'Sinclair (Simon) Says!'
 const passwordApp = new Project('Utility','Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'Algorithms, Canvas, DOM Manipulation')
 const blogApp = new Project('Blog', 'Notes App', './images/notes2self.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB', 'User Authentication, CRUD Functionality, Server-side Rendering')
 
+
+
 const projectBox = document.querySelector('.project-box')
 const createProject = (Project) => {
     let newTable = document.createElement('table')
@@ -83,9 +85,11 @@ const createProject = (Project) => {
 const simonDOM = createProject(simonApp)
 const passDOM = createProject(passwordApp)
 const blogDOM = createProject(blogApp)
+
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(passDOM)
 projectBox.appendChild(blogDOM)
+
 
 
 // * Screen Text Animation Function
@@ -282,12 +286,12 @@ class Color {
 
 }
 
-const shadesOfRed = new Color('red', 'rgba(255, 186, 186, .75)', 'rgba(255, 82, 82, .75)', 'white', '-webkit-linear-gradient(#e04a4a, #c4357f, #a7202d)')
-const shadesOfOrange = new Color('orange', 'rgba(240, 161, 80, .75)', 'rgba(240, 128, 32, .75)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
-const shadesOfYellow = new Color('yellow', 'rgba(255, 249, 174, .75)', 'rgba(233, 215, 0, .75)', 'white', '-webkit-linear-gradient(#d9e04a, #c48f35, #a7a420)')
-const shadesOfGreen = new Color('green', 'rgba(164, 251, 166,.75)', 'rgba(48, 203, 0, .75)', 'white', '-webkit-linear-gradient(#97e04a, #4cc435, #a7a400)')
-const shadesOfBlue = new Color('blue', 'rgba(172, 203, 255, .75)', 'rgba(120, 170, 255, .75)', 'white', '-webkit-linear-gradient(#4acce0, #354ac4, #5c20a7)')
-const shadesOfViolet = new Color('violet', 'rgba(195, 112, 253, .75)', 'rgba(155, 58, 215, .75)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
+const shadesOfRed = new Color('red', 'linear-gradient(0deg, rgba(194,75,154,0.8449973739495799) 8%, rgba(204,63,100,1) 59%, rgba(188,11,11,1) 90%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#bc0b0b, #c4357f, #a7202d)')
+const shadesOfOrange = new Color('orange', 'linear-gradient(0deg, rgba(231,199,131,0.6265099789915967) 11%, rgba(204,78,145,0.8618040966386554) 54%, rgba(244,172,42,1) 95%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
+const shadesOfYellow = new Color('yellow', 'linear-gradient(0deg, rgba(225,230,53,0.8646052170868348) 20%, rgba(214,205,45,1) 56%, rgba(253,187,45,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#d9e04a, #c48f35, #a7a420)')
+const shadesOfGreen = new Color('green', 'linear-gradient(0deg, rgba(138,207,104,0.6265099789915967) 26%, rgba(48,180,192,0.7189469537815126) 54%, rgba(13,164,47,1) 94%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient( #97e04a, #4cc435)')
+const shadesOfBlue = new Color('blue', 'linear-gradient(0deg, rgba(48,180,192,0.8646052170868348) 20%, rgba(65,100,166,1) 55%, rgba(53,45,253,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#354ac4, #5c20a7)')
+const shadesOfViolet = new Color('violet', 'linear-gradient(0deg, rgba(184,136,218,1) 40%, rgba(113,72,213,0.9094012605042017) 73%, rgba(92,64,128,.75)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
 
 
 
@@ -302,7 +306,7 @@ let colorChoice = 0
 let clickCount = 0
 const changeTheme = (Color) => {
     let body = document.querySelector('body')
-    body.style.backgroundColor = Color.bgColor
+    body.style.background = Color.bgColor
     let navBar = document.querySelector('.navbar')
     navBar.style.backgroundColor = Color.navColor
     navLogo.style.color = Color.accColor
@@ -318,7 +322,7 @@ const changeTheme = (Color) => {
     let projectBox = document.querySelector('.project-box')
     projectBox.style.backgroundColor = Color.bgColor
     let profilePic = document.querySelector('.pp-div')
-    profilePic.style.background = Color.accColor
+    profilePic.style.background = Color.bgColor
     colorChoice++
     if (guestWelcomed && clickCount === 1 && colorChoice < 2) {
         colorChoiceText()
