@@ -286,12 +286,12 @@ class Color {
 
 }
 
-const shadesOfRed = new Color('red', 'linear-gradient(0deg, rgba(194,75,154,0.8449973739495799) 8%, rgba(204,63,100,1) 59%, rgba(188,11,11,1) 90%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#bc0b0b, #c4357f, #a7202d)')
-const shadesOfOrange = new Color('orange', 'linear-gradient(0deg, rgba(231,199,131,0.6265099789915967) 11%, rgba(204,78,145,0.8618040966386554) 54%, rgba(244,172,42,1) 95%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
-const shadesOfYellow = new Color('yellow', 'linear-gradient(0deg, rgba(225,230,53,0.8646052170868348) 20%, rgba(214,205,45,1) 56%, rgba(253,187,45,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#d9e04a, #c48f35, #a7a420)')
-const shadesOfGreen = new Color('green', 'linear-gradient(0deg, rgba(138,207,104,0.6265099789915967) 26%, rgba(48,180,192,0.7189469537815126) 54%, rgba(13,164,47,1) 94%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient( #97e04a, #4cc435)')
-const shadesOfBlue = new Color('blue', 'linear-gradient(0deg, rgba(48,180,192,0.8646052170868348) 20%, rgba(65,100,166,1) 55%, rgba(53,45,253,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#354ac4, #5c20a7)')
-const shadesOfViolet = new Color('violet', 'linear-gradient(0deg, rgba(184,136,218,1) 40%, rgba(113,72,213,0.9094012605042017) 73%, rgba(92,64,128,.75)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
+const shadesOfRed = new Color('red', 'linear-gradient(-45deg, rgba(194,75,154,0.8449973739495799) 8%, rgba(204,63,100,1) 59%, rgba(188,11,11,1) 90%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#bc0b0b, #c4357f, #a7202d)')
+const shadesOfOrange = new Color('orange', 'linear-gradient(-45deg, #FFD384, #c48f35, #ff884b)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
+const shadesOfYellow = new Color('yellow', 'linear-gradient(-45deg, rgba(225,230,53,0.8646052170868348) 20%, rgba(214,205,45,1) 56%, rgba(253,187,45,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#FFD384, #c48f35, #ff884b)')
+const shadesOfGreen = new Color('green', 'linear-gradient(-45deg, rgba(138,207,104,0.6265099789915967) 26%, rgba(48,180,192,0.7189469537815126) 54%, rgba(13,164,47,1) 94%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient( #97e04a, #4cc435)')
+const shadesOfBlue = new Color('blue', 'linear-gradient(-45deg, rgba(48,180,192,0.8646052170868348) 20%, rgba(65,100,166,1) 55%, rgba(53,45,253,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#354ac4, #5c20a7)')
+const shadesOfViolet = new Color('violet', 'linear-gradient(-45deg, #DEDDFA, #DAB8F3, #EA7AD7)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
 
 
 
@@ -307,6 +307,8 @@ let clickCount = 0
 const changeTheme = (Color) => {
     let body = document.querySelector('body')
     body.style.background = Color.bgColor
+    body.style.backgroundSize = '400% 400%'
+    body.style.animation = 'gradient 10s ease infinite'
     let navBar = document.querySelector('.navbar')
     navBar.style.backgroundColor = Color.navColor
     navLogo.style.color = Color.accColor
