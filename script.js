@@ -286,12 +286,12 @@ class Color {
 
 }
 
-const shadesOfRed = new Color('red', 'linear-gradient(-45deg, #FF9898, #E15858, #FF8787)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#bc0b0b, #c4357f, #a7202d)')
-const shadesOfOrange = new Color('orange', 'linear-gradient(-45deg, #FFD384, #c48f35, #ff884b)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
+const shadesOfRed = new Color('red', 'linear-gradient(-45deg, #E0144C, #FF5858, #FF8787)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#bc0b0b, #c4357f, #a7202d)')
+const shadesOfOrange = new Color('orange', 'linear-gradient(-45deg,#FFD8A9, #F1A661, #E38B29)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
 const shadesOfYellow = new Color('yellow', 'linear-gradient(-45deg, rgba(225,230,53,0.8646052170868348) 20%, rgba(214,205,45,1) 56%, rgba(253,187,45,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#FFD384, #c48f35, #ff884b)')
 const shadesOfGreen = new Color('green', 'linear-gradient(-45deg, rgba(138,207,104,0.6265099789915967) 26%, rgba(48,180,192,0.7189469537815126) 54%, rgba(13,164,47,1) 94%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient( #97e04a, #4cc435)')
-const shadesOfBlue = new Color('blue', 'linear-gradient(-45deg, rgba(48,180,192,0.8646052170868348) 20%, rgba(65,100,166,1) 55%, rgba(53,45,253,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#354ac4, #5c20a7)')
-const shadesOfViolet = new Color('violet', 'linear-gradient(-45deg, #DEDDFA, #DAB8F3, #905E96)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
+const shadesOfBlue = new Color('blue', 'linear-gradient(-45deg, #AAC4FF, rgba(65,100,166,1) 55%, #B1B2FF)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#354ac4, #5c20a7)')
+const shadesOfViolet = new Color('violet', 'linear-gradient(-45deg, #DAB8F3, #905E96, #A267AC)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
 
 
 
