@@ -276,12 +276,13 @@ Array.from(colors).forEach(color => color.style.backgroundColor = colorArr[color
 // ^ Creating 'Color' class 
 
 class Color { 
-    constructor(name, bgColor, navColor, txtColor, accColor) {
+    constructor(name, bgColor, navColor, txtColor, accColor, emoji) {
         this.name = name
         this.bgColor = bgColor
         this.navColor = navColor
         this.txtColor = txtColor
         this.accColor = accColor
+        this.emoji = emoji
     }
 
 }
