@@ -132,6 +132,7 @@ ul {
 }
 body {
     background: white;
+
     display: flex;
     flex-direction: column;
     width: auto;
@@ -171,24 +172,26 @@ button {
 
 .container {
     /* change below to 100vh to enable scroll-snap-type:  */
-    height: 100vh; 
+    display: flex;
+    height: 100vh;
     width: 100vw;
     flex-direction: column;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scroll-padding: 10vh;
+    /* scroll-padding: 10vh; */
     /* scroll-padding: 35px; */
  
 }
 
 .container > section {
-    height: 100%;
+
+    min-height: 800px;
     width: 100vw;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     scroll-snap-align: center;
-    scroll-margin: 2em;
+    /* scroll-margin: 2em; */
 
 }
 
@@ -197,13 +200,16 @@ button {
 
 .container > .one {
 
+    max-height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     flex-direction: column;
     justify-items: center;
-    height: 100vh; 
-    width: 100vw;
+    order: 1;
+
 }
 
 .one >  .title-div {
@@ -306,7 +312,7 @@ button {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
-    width: 100%;
+    width: 85vw;
     
 }
 
@@ -409,9 +415,11 @@ span.fade {
 
 .container > .about {
     /* display: none; */
+    align-items: center;
+    justify-items: center;
     height: 100vh;
     width: 100vw;
-    position: static;
+    order: 2;
 
 }
 
@@ -419,9 +427,10 @@ span.fade {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space;
     height: 100vh;
     width: 100vw;
-    justify-content: space-evenly;
+    gap: 10px;
 
 }
 
@@ -448,7 +457,7 @@ span.fade {
 
 .pp-div> .profile-pic {
     height: auto;
-    width: 178px;
+    width: 160px;
     border: 0px solid;
     border-radius: 100%;
     order: 2;
@@ -473,7 +482,7 @@ span.fade {
 }
 
 .about-container > p {
-    position: relative;
+
     text-align: center;
     font-size: 18px;
     height: 1fr;
@@ -498,7 +507,8 @@ span.fade {
     width: 75%;
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 65px;
+    margin-top: 20px;
+
 
 }
 
@@ -561,16 +571,17 @@ span.fade {
     justify-items: center;
     height: 100vh;
     width: 100vw;
+    order: 3;
 }
 
 .projects > .projects-container {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space;
     height: 100vh;
     width: 100vw;
+    gap: 25px;
 }
 
 .projects-container > .project-header {
@@ -585,11 +596,10 @@ span.fade {
     order: 2;
     flex: flex-end;
     text-align: center;
-    font-size: 20px;
-    margin-left: 55px;
-    margin-right: 55px;
-    height: auto;
-    width: 50%;
+    font-size: 18px;
+    height: 1fr;
+    width: 75%;
+
 
 
 }
@@ -631,7 +641,7 @@ span.fade {
 
 
 .project-img {
-    width: 28vw;
+    width: 25vw;
     height: auto;
 }
 
@@ -642,6 +652,10 @@ span.fade {
 }
 
 /* ^ Starts contact div */
+
+.container > .contact {
+    order: 4;
+}
 
 .contact > .contact-div {
     display: flex;
