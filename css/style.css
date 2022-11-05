@@ -994,6 +994,8 @@ span.fade {
         border-radius: 100%;
         border-image-slice: 1;
         background: -webkit-linear-gradient(#000, #000, #000);
+
+
     }
     
     .pp-div> .profile-pic {
@@ -1002,6 +1004,8 @@ span.fade {
         border: 2px solid transparent;
         border-radius: 100%;
         order: 2;
+ 
+
     
     }
 

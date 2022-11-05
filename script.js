@@ -298,12 +298,19 @@ class Color {
 
 }
 
-const shadesOfRed = new Color('red', 'linear-gradient(-45deg, #E0144C, #FF5858, #FF8787)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#bc0b0b, #c4357f, #a7202d)')
+
+
+const shadesOfRed = new Color('red', 'linear-gradient(-45deg, #a7202d, #FA7070, #E64848)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#C21010, #FF5858, #a7202d)')
+
 const shadesOfOrange = new Color('orange', 'linear-gradient(-45deg,#FFD8A9, #F1A661, #E38B29)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#e0ad4a, #c45335, #a77220)')
-const shadesOfYellow = new Color('yellow', 'linear-gradient(-45deg, rgba(225,230,53,0.8646052170868348) 20%, rgba(214,205,45,1) 56%, rgba(253,187,45,1) 100%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#FFD384, #c48f35, #ff884b)')
+
+const shadesOfYellow = new Color('yellow', 'linear-gradient(-45deg, #F4E06D, #FFF38C, #F0E161)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(-45deg, rgba(225,230,53,0.8646052170868348) 20%, rgba(214,205,45,1) 56%, rgba(253,187,45,1) 100%)')
+
 const shadesOfGreen = new Color('green', 'linear-gradient(-45deg, rgba(138,207,104,0.6265099789915967) 26%, rgba(48,180,192,0.7189469537815126) 54%, rgba(13,164,47,1) 94%)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient( #97e04a, #4cc435)')
+
 const shadesOfBlue = new Color('blue', 'linear-gradient(-45deg, #AAC4FF, rgba(65,100,166,1) 55%, #B1B2FF)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#354ac4, #5c20a7)')
-const shadesOfViolet = new Color('violet', 'linear-gradient(-45deg, #DAB8F3, #905E96, #A267AC)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
+
+const shadesOfViolet = new Color('violet', 'linear-gradient(-45deg, #AF7AB3, #C8B6E2, #80558C)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
 
 
 
@@ -320,7 +327,7 @@ const changeTheme = (Color) => {
     let body = document.querySelector('body')
     body.style.background = Color.bgColor
     body.style.backgroundSize = '400% 400%'
-    body.style.animation = 'gradient 10s ease infinite'
+    body.style.animation = 'gradient 5s ease infinite'
     let navBar = document.querySelector('.navbar')
     navBar.style.backgroundColor = Color.navColor
     navLogo.style.color = Color.accColor
