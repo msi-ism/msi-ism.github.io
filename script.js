@@ -316,7 +316,7 @@ const shadesOfGreen = new Color('green', 'linear-gradient(-45deg, rgba(138,207,1
 
 const shadesOfBlue = new Color('blue', 'linear-gradient(-45deg, #AAC4FF, rgba(65,100,166,1) 55%, #B1B2FF)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#354ac4, #5c20a7)')
 
-const shadesOfViolet = new Color('violet', 'linear-gradient(-45deg, #AF7AB3, #C8B6E2, #80558C)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
+const shadesOfViolet = new Color('violet', 'linear-gradient(-45deg, #C689C6, #C8B6E2, #80558C)', 'rgba(0, 0, 0, .9)', 'white', '-webkit-linear-gradient(#b888da, #7148d5, #5c4080)')
 
 
 
