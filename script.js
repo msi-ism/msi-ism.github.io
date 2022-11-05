@@ -55,6 +55,9 @@ const simonApp = new Project('Memory Game/Instrument ', 'Sinclair (Simon) Says!'
 const passwordApp = new Project('Utility','Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'Algorithms, Canvas, DOM Manipulation')
 const blogApp = new Project('Blog', 'Notes App', './images/notes2self.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB', 'User Authentication, CRUD Functionality, Server-side Rendering')
 
+const portApp = new Project('Portfolio', 'My Portfolio', 'images/msiport.png', 'https://msi-ism.github.io/', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'DOM Manipulation, UI/UX Design' )
+
+
 
 
 const projectBox = document.querySelector('.project-box')
@@ -89,10 +92,13 @@ const createProject = (Project) => {
 const simonDOM = createProject(simonApp)
 const passDOM = createProject(passwordApp)
 const blogDOM = createProject(blogApp)
+const portDOM = createProject(portApp)
+
 
 projectBox.appendChild(simonDOM)
-projectBox.appendChild(passDOM)
+projectBox.appendChild(portDOM)
 projectBox.appendChild(blogDOM)
+projectBox.appendChild(passDOM)
 
 
 
