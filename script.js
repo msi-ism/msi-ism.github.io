@@ -9,6 +9,10 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active')
 })
 
+
+
+
+
 // ^ Creating handshake function
 let hand = document.querySelector('.hand-shake')
 const handShakeOn = () => {
@@ -208,6 +212,13 @@ guestPrompt()
 
 // ^ Creating function to capture and store guest input
 let guestBox = document.querySelector('.guest-text')
+
+
+guestBox.addEventListener('keydown', (event) => {
+    if (this.value.length === 11 && event.keyCode != 13) {
+        event.preventDefault()
+    }
+})
 
 const getGuest = () => {
     let guestValue = guestBox.value
