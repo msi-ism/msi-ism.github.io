@@ -13,7 +13,7 @@ header > .navbar {
 
 
 .navbar > .nav-logo {
-    font-size: 38px;
+    font-size: 25px;
     color: white !important;
     width: 1fr;
     float: left;
@@ -192,7 +192,6 @@ button {
     align-items: center;
     scroll-snap-align: center;
     /* scroll-margin: 2em; */
-
 }
 
 
@@ -733,27 +732,30 @@ span.fade {
 
 
     
-
     .container {
         /* change below to 100vh to enable scroll-snap-type:  */
-        height: 100vh; 
-        width: auto;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
         flex-direction: column;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
-        /* scroll-padding: 35px; */
-
+        /* scroll-padding: 10vh; */
+        scroll-padding: 45px;
+     
     }
     
     .container > section {
-        height: 100vh;
+    
+        min-height: 800px;
         width: 100vw;
-        display: flex;
+        display: block;
         justify-content: center;
         align-items: center;
-        scroll-snap-align: center;
-    
+        scroll-snap-align: start;
+        /* scroll-margin: 2em; */
     }
+    
     
     
     /* * starts intro div */
@@ -977,7 +979,6 @@ span.fade {
     }
 
     .about-container > .about-header {
-        margin-top: 2vh;
         margin-bottom: 2vh;
         font-size: 3.5vh;
     }
