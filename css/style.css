@@ -112,7 +112,7 @@ a {
 }
 
 nav {
-    background-color: rgba(49, 17, 67, 0.9);
+    background-color: rgba(49, 17, 67, 1);
 }
 
 p {
@@ -376,12 +376,12 @@ button {
     padding: 3px;
 }
 
-span {
+.split {
     opacity: 0;
     transition: all 0.7s step-end;
 }
   
-span.fade {
+.split.fade {
     opacity: 1;
 }
 
@@ -684,10 +684,33 @@ span.fade {
 
 
 
-@media(max-width:520px){
-    .hamburger{
-        display: block;
+@media(max-width:768px){
+    
+    .navbar {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+        min-height: 70px;
+        justify-content: right;
+        align-items: center;
+        padding: 0 24px;
+        width: 100vw;
     }
+
+    .navbar > .hamburger {
+        display: inline-block;
+        cursor: pointer;
+    }
+    
+    .hamburger > .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        color: beige;
+    }
+    
 
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
@@ -699,16 +722,6 @@ span.fade {
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    .navbar {
-        display: flex;
-        grid-template-columns: 1fr 1fr;
-        min-height: 70px;
-        justify-content: right;
-        align-items: center;
-        padding: 0 24px;
-        width: 100vw;
-    }
-
     .nav-menu {
         /* ^ Keeps navbar on screen while scrolling until a link is click */
         position: fixed;
@@ -717,7 +730,7 @@ span.fade {
         gap: 0;
         color: white;
         flex-direction: column;
-        background-color: blueviolet;
+        background-color: rgba(49, 17, 67, 1);
         width: 100%;
         transition: 0.3s;
     }
@@ -739,7 +752,6 @@ span.fade {
         flex-direction: column;
         overflow-y: scroll;
         scroll-snap-type: y mandatory;
-        /* scroll-padding: 10vh; */
         scroll-padding: 45px;
      
     }
@@ -1158,7 +1170,6 @@ span.fade {
     
     }
     
-    
     .project-box > .project-table {
         display: flex;
         order: 1;
@@ -1182,14 +1193,10 @@ span.fade {
   
     }
     
-    
     .project-img {
         width: 75vw;
         height: auto;
     }
-
-
-
 
 
 }

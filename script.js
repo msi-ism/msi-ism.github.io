@@ -31,8 +31,9 @@ const handShake = () => {
 setTimeout(handShake, 2000)
 
 // & This removes the class list of 'active' from hamburger menu on link click making the menu collapse
-document.querySelectorAll(".nav-link").forEach(n => n, addEventListener('click', () => {
-    hamburger.classList.remove('active')
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.toggle('active')
+    navMenu.classList.toggle('active')
 }))
 
 // ** Projects
@@ -127,11 +128,11 @@ const animateText = (str) => {
     console.log(splitText)
     // ^ 4th loop through split text array & add letter from splitText[i] to welcomeText inner HTML within a span tag
     for (let i = 0; i < splitText.length; i++) {
-        welcomeText.innerHTML += `<span id='split'>${splitText[i]}</span>`
+        welcomeText.innerHTML += `<span class='split'>${splitText[i]}</span>`
     }
     // ^ Creating function that adds class of fade to the spans created above
     const onTick = () => {
-        const span = welcomeText.querySelectorAll("#split")[char]
+        const span = welcomeText.querySelectorAll(".split")[char]
         span.classList.add('fade')
         // ^ Counts how many characters the span class has been added to
         char++
@@ -162,11 +163,11 @@ const animateSubText = (str) => {
     let splitText = Array.from(displayText)
     console.log(splitText)
     for (let i = 0; i < splitText.length; i++) {
-        guestQuestion.innerHTML += `<span id='split'>${splitText[i]}</span>`
+        guestQuestion.innerHTML += `<span class='split'>${splitText[i]}</span>`
     }
 
     const onTick = () => {
-        const span = guestQuestion.querySelectorAll("#split")[char]
+        const span = guestQuestion.querySelectorAll(".split")[char]
         span.classList.add('fade')
         char++
         if (char === splitText.length) {
@@ -221,7 +222,7 @@ let guestBox = document.querySelector('.guest-text')
 
 
 guestBox.addEventListener('keydown', (event) => {
-    if (this.value.length === 11 && event.keyCode != 13) {
+    if (this.value.length === 8 && event.keyCode != 13) {
         event.preventDefault()
     }
 })
