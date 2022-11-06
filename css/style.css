@@ -59,7 +59,7 @@ header > .navbar {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: beige;
+    background-color: white;
 }
 
 
@@ -708,7 +708,7 @@ button {
         margin: 5px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        color: beige;
+        color: white;
     }
     
 
@@ -1114,7 +1114,7 @@ button {
         grid-row-start: 3;
     }
     
-    .nav-logo {
+    .navbar > .nav-logo {
         font-size: 6vw;
         color: white !important;
         width: 1fr;
