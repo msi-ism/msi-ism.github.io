@@ -1,21 +1,21 @@
-// Initialising the canvas
+// ^ Initializing the canvas
 let canvas = document.querySelector("canvas"),
     ctx = canvas.getContext("2d");
 
-// Setting the width and height of the canvas
+// ^ Setting the width and height of the canvas
 canvas.width = window.innerWidth;
 canvas.height = window.outerHeight;
 
-// Setting up the letters
+//  ^ Setting up the letters
 let letters =
     "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ!#$%&*+0123456789";
 letters = letters.split("");
 
-// Setting up the columns
+// ^ Setting up the columns
 let fontSize = 10,
     columns = canvas.width / fontSize;
 
-// Setting up the drops
+// ^ Setting up the drops
 let drops = [];
 for (let i = 0; i < columns; i++) {
     drops[i] = 1;
@@ -37,7 +37,7 @@ function draw() {
     }
 }
 
-// Loop the animation
+// ^ Loop the animation
 setInterval(draw, 33);
 
 let pwLetters = [
@@ -97,7 +97,10 @@ let pwLetters = [
 let pwNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 let pwSymbols = ["!", "#", "$", "%", "&", "(", ")", "*", "+"];
 
-function generatePassword() {
+
+// ^ Generate Password Function
+
+const generatePassword = () => {
     let letterGroup = "";
     for (let i = 0; i < 4; i++) {
         let randLetter = pwLetters[Math.floor(Math.random() * pwLetters.length)];
@@ -126,7 +129,10 @@ function generatePassword() {
 }
 generatePassword();
 
-function copyText(htmlElement) {
+
+// ^ Copy Text Function
+
+const copyText = (htmlElement) => {
     if (!htmlElement) {
         return;
     }
