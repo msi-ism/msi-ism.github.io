@@ -73,7 +73,7 @@ const createProject = (Project) => {
     let row1 = newTable.insertRow()
     row1.innerHTML = `<a href=${Project.appSrc} target="_blank"><h3>${Project.title}</h3></a>`
     let row2 = newTable.insertRow()
-    row2.innerHTML = `<a href=${Project.appSrc} target="_blank"><img class='project-img' src=${Project.imgSrc}></a>`
+    row2.innerHTML = `<a href=${Project.appSrc} target="_blank"><img class='project-img' alt=${Project.title}image src=${Project.imgSrc}></a>`
     let row3 = newTable.insertRow()
     row3.innerHTML = `<a href=${Project.appRepo} target="_blank">Repo</a>`
     let row4 = newTable.insertRow()
