@@ -21,7 +21,7 @@ for (let i = 0; i < columns; i++) {
     drops[i] = 1;
 }
 
-// Setting up the draw function
+// ^ Setting up the draw function
 function draw() {
     ctx.fillStyle = "rgba(0, 0, 0, .1)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -39,6 +39,8 @@ function draw() {
 
 // ^ Loop the animation
 setInterval(draw, 33);
+
+// ^ Declaring array of letters, symbols, and numbers to be used in password generation
 
 let pwLetters = [
     "a",
