@@ -149,4 +149,5 @@ const copyText = (htmlElement) => {
 
 document.querySelector("#copy-btn").onclick = function () {
     copyText(document.querySelector("#target1"));
+    alert("Password copied!")
 };
