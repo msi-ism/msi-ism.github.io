@@ -58,7 +58,7 @@ const blogApp = new Project('Blog', 'Notes App', './images/notestoself.png', 'ht
 
 const portApp = new Project('Portfolio', 'My Portfolio', 'images/msiport.png', 'https://msi-ism.github.io/', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'DOM Manipulation, UI/UX Design' )
 
-const ayaApp = new Project('Journal, Social Media', 'asyouare.community', 'images/aya.png', 'https://asyouare.herokuapp.com', 'https://github.com/msi-ism/aya-journal-app', 'React, Express, Node, MongoDB', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks, User Authentication' )
+const ayaApp = new Project('Journal, Social Media', 'Self-Reflection Journal', 'images/aya.png', 'https://asyouare.herokuapp.com', 'https://github.com/msi-ism/aya-journal-app', 'React, Express, Node, MongoDB', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks, User Authentication' )
 
 
 
