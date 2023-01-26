@@ -10,9 +10,6 @@ hamburger.addEventListener('click', () => {
 })
 
 
-
-
-
 // ^ Creating handshake function
 let hand = document.querySelector('.hand-shake')
 const handShakeOn = () => {
@@ -60,6 +57,8 @@ const portApp = new Project('Portfolio', 'My Portfolio', 'images/msiport.png', '
 
 const ayaApp = new Project('Journal, Social Media', 'Self-Reflection Journal', 'images/aya.png', 'https://asyouare.herokuapp.com', 'https://github.com/msi-ism/aya-journal-app', 'React, Express, Node, MongoDB', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks, User Authentication' )
 
+const daygraderApp = new ('Accountability/Productivity Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks' )
+
 
 
 
@@ -95,9 +94,10 @@ const passDOM = createProject(passwordApp)
 const blogDOM = createProject(blogApp)
 const portDOM = createProject(portApp)
 const ayaDOM = createProject(ayaApp)
+const daygraderDOM = createProject(daygraderApp)
 
 
-
+projectBox.appendChild(daygraderDOM)
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(blogDOM)
 projectBox.appendChild(ayaDOM)
