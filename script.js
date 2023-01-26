@@ -57,7 +57,7 @@ const portApp = new Project('Portfolio', 'My Portfolio', 'images/msiport.png', '
 
 const ayaApp = new Project('Journal, Social Media', 'Self-Reflection Journal', 'images/aya.png', 'https://asyouare.herokuapp.com', 'https://github.com/msi-ism/aya-journal-app', 'React, Express, Node, MongoDB', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks, User Authentication' )
 
-const daygraderApp = new ('Accountability/Productivity Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks' )
+const dayApp = new Project('Accountability/Productivity Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks' )
 
 
 
@@ -94,10 +94,10 @@ const passDOM = createProject(passwordApp)
 const blogDOM = createProject(blogApp)
 const portDOM = createProject(portApp)
 const ayaDOM = createProject(ayaApp)
-const daygraderDOM = createProject(daygraderApp)
+const dayDOM = createProject(dayApp)
 
 
-projectBox.appendChild(daygraderDOM)
+projectBox.appendChild(dayDOM)
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(blogDOM)
 projectBox.appendChild(ayaDOM)
