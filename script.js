@@ -100,7 +100,7 @@ const dayDOM = createProject(dayApp)
 projectBox.appendChild(dayDOM)
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(blogDOM)
-projectBox.appendChild(ayaDOM)
+// projectBox.appendChild(ayaDOM)
 projectBox.appendChild(portDOM)
 projectBox.appendChild(passDOM)
 
