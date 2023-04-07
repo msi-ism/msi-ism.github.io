@@ -752,8 +752,8 @@ button {
         width: 100vw;
         flex-direction: column;
         overflow-y: scroll;
-        scroll-snap-type: y mandatory;
-        scroll-padding: 45px;
+        scroll-snap-type: y proximity;
+        scroll-padding-top: 45px;
      
     }
     
@@ -765,6 +765,7 @@ button {
         justify-content: center;
         align-items: center;
         scroll-snap-align: start;
+        scroll-snap-stop: always;
         /* scroll-margin: 2em; */
     }
     
