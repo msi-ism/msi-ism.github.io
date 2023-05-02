@@ -59,6 +59,8 @@ const ayaApp = new Project('Journal, Social Media', 'Self-Reflection Journal', '
 
 const dayApp = new Project('Accountability/Productivity Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks' )
 
+const eyeApp = new Project('Meditation Tool', 'Open-Eye Meditations', 'images/openeye.png', 'https://msinclair.dev/visual-meditation-app/', 'https://github.com/msi-ism/visual-meditation-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, State Management, Animation' )
+
 
 
 
@@ -89,14 +91,17 @@ const createProject = (Project) => {
     return newTable
 }
 
+
 const simonDOM = createProject(simonApp)
 const passDOM = createProject(passwordApp)
 const blogDOM = createProject(blogApp)
 const portDOM = createProject(portApp)
 const ayaDOM = createProject(ayaApp)
 const dayDOM = createProject(dayApp)
+const eyeDOM = createProject(eyeApp)
 
 
+projectBox.appendChild(eyeDOM)
 projectBox.appendChild(dayDOM)
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(blogDOM)
