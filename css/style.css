@@ -516,8 +516,8 @@ button {
     text-align: center;
     font-family: 'DM Sans';
     padding: 20px;
-    height: 300px;
-    width: auto;
+    height: auto;
+    width: 300px;
     border: 2px solid black;
     background-color: white;
     flex: auto;
@@ -610,7 +610,7 @@ button {
     flex-wrap: nowrap;
     overflow-x: auto;
     height: auto;
-    width: 99vw;
+    width: 100vw;
     margin-top: 25px;
     box-shadow: inset 0 10px 20px 'black';
 
@@ -622,7 +622,7 @@ button {
     overflow-wrap: wrap;
     text-align: center;
     height: 100%;
-    width: 100%;
+    min-width: 390px;
     font-family: 'DM Sans';
     padding: 15px;
     border: 1px solid black;
@@ -685,7 +685,7 @@ button {
 
 
 
-@media(max-width:768px){
+@media(max-width:600px){
     
     .navbar {
         display: flex;
@@ -1022,7 +1022,6 @@ button {
     
     }
 
-
     .about-container > p {
         text-align: center;
         font-size: 3vw;
@@ -1054,8 +1053,7 @@ button {
         justify-items: center;
         text-align: center;
         font-family: 'DM Sans';
-        height: 13vh;
-        width: 80vw;
+        height: 15vh;
         border: 2px solid black;
         background-color: white;
         margin-bottom: 10px;
@@ -1178,7 +1176,7 @@ button {
         flex-direction: column;
         text-align: center;
         height: 99%;
-        width: 85vw;
+        min-width: 350px;
         font-family: 'DM Sans';
         border: 1px solid black;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
@@ -1196,7 +1194,7 @@ button {
     }
     
     .project-img {
-        width: 75vw;
+        width: 100%;
         height: auto;
     }
 
