@@ -49,17 +49,19 @@ class Project {
     }
 }
 
-const simonApp = new Project('Memory Game/Instrument ', 'Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML', 'Asynchronous Programming, Game Design, UI Design')
+const simonApp = new Project('Memory Game/Instrument ', 'Sinclair (Simon) Says!', './images/ss-new-ui.png', 'https://msi-ism.github.io/sinclair_says/', 'https://github.com/msi-ism/sinclair_says', 'Javascript, CSS, HTML', 'Async Programming, Game Design, UI Design')
 const passwordApp = new Project('Utility','Password Generator', './images/password-img.png', 'https://msi-ism.github.io/password_generator.html', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'Algorithms, Canvas, DOM Manipulation')
-const blogApp = new Project('Notes App', 'Notes To Self', './images/notestoself.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB', 'User Authentication, CRUD Functionality, Server-side Rendering')
+const blogApp = new Project('Notes App', 'Notes To Self', './images/notestoself.png', 'https://ms-blogapp.herokuapp.com/', 'https://github.com/msi-ism/blog_app','React, Express, Node, MongoDB', 'User Auth, CRUD, SSR')
 
 const portApp = new Project('Portfolio', 'My Portfolio', 'images/msiport.png', 'https://msi-ism.github.io/', 'https://github.com/msi-ism/msi-ism.github.io', 'Javascript, CSS, HTML', 'DOM Manipulation, UI/UX Design' )
 
-const ayaApp = new Project('Journal, Social Media', 'Self-Reflection Journal', 'images/aya.png', 'https://asyouare.herokuapp.com', 'https://github.com/msi-ism/aya-journal-app', 'React, Express, Node, MongoDB', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks, User Authentication' )
+const ayaApp = new Project('Journal, Social Media', 'Self-Reflection Journal', 'images/aya.png', 'https://asyouare.herokuapp.com', 'https://github.com/msi-ism/aya-journal-app', 'React, Express, Node, MongoDB', 'CSR, CRUD, State Mgmt., Custom Hooks, User Auth, Async Programming' )
 
-const dayApp = new Project('Accountability Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks' )
+const dayApp = new Project('Accountability Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React, Node, Javascript, CSS, HTML', 'CSR, CRUD, State Mgmt., Custom Hooks' )
 
-const eyeApp = new Project('Meditation Tool', 'Open-Eye Meditations', 'images/openeye.png', 'https://msinclair.dev/visual-meditation-app/', 'https://github.com/msi-ism/visual-meditation-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, State Management, Animation' )
+const vbApp = new Project('Ecommerce Site', 'VinBohême', 'images/vb.png', 'https://vinboheme.com/', 'https://vinboheme.com/', 'Shopify CMS, Liquid, CSS', 'Ecommerce, CMS, UI Design')
+
+const eyeApp = new Project('Meditation Tool', 'Open-Eye Meditations', 'images/openeye.png', 'https://msinclair.dev/visual-meditation-app/', 'https://github.com/msi-ism/visual-meditation-app', 'React, Node, Javascript, CSS, HTML', 'CSR, State Management, DOM Manipulation' )
 
 
 
@@ -98,11 +100,13 @@ const blogDOM = createProject(blogApp)
 const portDOM = createProject(portApp)
 const ayaDOM = createProject(ayaApp)
 const dayDOM = createProject(dayApp)
+const vbDOM = createProject(vbApp)
 const eyeDOM = createProject(eyeApp)
 
 
 projectBox.appendChild(eyeDOM)
 projectBox.appendChild(dayDOM)
+projectBox.appendChild(vbDOM)
 projectBox.appendChild(simonDOM)
 projectBox.appendChild(blogDOM)
 // projectBox.appendChild(ayaDOM)
