@@ -755,7 +755,7 @@ button {
         flex-direction: column;
         overflow-y: scroll;
         scroll-snap-type: y proximity;
-        scroll-padding-top: 15px;
+        scroll-padding-top: 5vh;
      
     }
     
@@ -1169,6 +1169,8 @@ button {
         height: auto;
         width: 100vw;
         box-shadow: inset 0 10px 20px 'black';
+        padding-top: 10px;
+        padding-bottom: 15px;
     
     }
     
@@ -1177,9 +1179,10 @@ button {
         order: 1;
         flex-direction: column;
         text-align: center;
-        height: 375px;
+        height: 315px;
         min-width: 350px;
         font-family: 'DM Sans';
+        font-size: 14px;
         border: 1px solid black;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     }
@@ -1190,12 +1193,12 @@ button {
     }
 
     h4 {
-        font-size: 16px;
+        font-size: 14px;
   
     }
     
     .project-img {
-        width: 90%;
+        width: 80%;
         height: auto;
     }
 
