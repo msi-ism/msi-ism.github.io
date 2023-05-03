@@ -57,7 +57,7 @@ const portApp = new Project('Portfolio', 'My Portfolio', 'images/msiport.png', '
 
 const ayaApp = new Project('Journal, Social Media', 'Self-Reflection Journal', 'images/aya.png', 'https://asyouare.herokuapp.com', 'https://github.com/msi-ism/aya-journal-app', 'React, Express, Node, MongoDB', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks, User Authentication' )
 
-const dayApp = new Project('Accountability/Productivity Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks' )
+const dayApp = new Project('Accountability Tool', 'Grade Your Days', 'images/daygrader.png', 'https://gradeyourdays.herokuapp.com/', 'https://github.com/msi-ism/day-grader-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, CRUD Functionality, State Mgmt., Custom Hooks' )
 
 const eyeApp = new Project('Meditation Tool', 'Open-Eye Meditations', 'images/openeye.png', 'https://msinclair.dev/visual-meditation-app/', 'https://github.com/msi-ism/visual-meditation-app', 'React, Node, Javascript, CSS, HTML', 'Client-side Rendering, State Management, Animation' )
 
@@ -80,7 +80,7 @@ const createProject = (Project) => {
     let row4 = newTable.insertRow()
     row4.innerHTML = `<div class='row-title'><h4>App Type: </h4><p>${Project.type}</p></div>`
     let row5 = newTable.insertRow()
-    row5.innerHTML = `<div class='row-title'><h4>Technologies: </h4><p> ${Project.technologies}</p></div>`
+    row5.innerHTML = `<div class='row-title'><h4>Tech: </h4><p> ${Project.technologies}</p></div>`
     row5.style.fontFamily = "'DM Sans', sans-serif"
     let row6 = newTable.insertRow()
     row6.innerHTML = `<div class='row-title'><h4>Competencies Displayed:</h4></div>`
