@@ -754,8 +754,7 @@ button {
         width: 100vw;
         flex-direction: column;
         overflow-y: scroll;
-        scroll-snap-type: y proximity;
-        scroll-padding-top: 5vh;
+        scroll-snap-type: none;
      
     }
     
